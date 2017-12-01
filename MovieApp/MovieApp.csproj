@@ -95,6 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Drink.cs" />
+    <Compile Include="Model\Food.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\NotifyChanged.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -110,7 +112,12 @@
     <None Include="MovieApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Business\AllOurBuissnessInformation.txt" />
+    <Content Include="Assets\babies.jpg" />
+    <Content Include="Assets\batman.jpg" />
+    <Content Include="Assets\fightclub.jpg" />
+    <Content Include="Assets\forrestGump.jpg" />
+    <Content Include="Assets\shark.jpg" />
+    <Content Include="Assets\surf.jpg" />
     <Content Include="Business\Conceptual Diagram.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

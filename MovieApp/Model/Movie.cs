@@ -10,17 +10,16 @@ namespace MovieApp.Model
     {
         
         // Description about the movie
-        public string _title;
-        public string _instructor;
-        public string _length;
-        public string _actors;
-        public string _censorship;
-        public string _description;
-        public string _premiereDate;
+        private string _title;
+        private string _instructor;
+        private string _length;
+        private string _actors;
+        private string _censorship;
+        private string _description;
+        
 
         // Constructer.
-        public Movie(string title, string instructor, string lenght, string actors, string censorship, string description,
-            string premiereDate)
+        public Movie(string title, string instructor, string lenght, string actors, string censorship, string description)
         {
             _title = title;
             _instructor = instructor;
@@ -28,7 +27,6 @@ namespace MovieApp.Model
             _actors = actors;
             _censorship = censorship;
             _description = description;
-            _premiereDate = premiereDate;
         }
 
         //--------------------------------------------
@@ -71,25 +69,17 @@ namespace MovieApp.Model
             set { _description = value; OnPropertyChanged(Description);}
         }
 
-        public string PremiereDate
-        {
-            get { return _premiereDate; }
-            set { _premiereDate = value; OnPropertyChanged(PremiereDate); }
-        }
-
-
 
         /* Tostring method that return all the information
              about the movie */
         public override string ToString()
         {
             return "Title: " + Title + "\n" +
-                        "Instructor: " + Instructor + "\n" +
-                        "Length: " + Length + "\n" +
-                        "Actors: " + Actors + "\n" +
-                       "Censorship:  " + Censorship + "\n" +
-                       "Description:  " + Description + "\n" +
-                       "Premiere Date: " + PremiereDate;
+                   "Instructor: " + Instructor + "\n" +
+                   "Length: " + Length + "\n" +
+                   "Actors: " + Actors + "\n" +
+                   "Censorship:  " + Censorship + "\n" +
+                   "Description:  " + Description;
         }
     }
 }

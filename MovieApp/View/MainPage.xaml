@@ -9,5 +9,39 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="240"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Border BorderThickness="0,0,0,11" BorderBrush="#773438">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Home" Margin="0,10,10,0" Foreground="White"  />
+                    <TextBlock Text="Browse" Margin="0,10,10,0" Foreground="White" />
+                    <TextBlock Text="About" Margin="0,10,10,0" Foreground="White" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <FlipView Grid.Row="1">
+            <FlipView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </FlipView.RenderTransform>
+            <Image Source="../Assets/batman.jpg" Stretch="Fill"/>
+            <Image Source="../Assets/fightclub.jpg" Stretch="Fill"/>
+            <Image Source="../Assets/forrestGump.jpg" Stretch="Fill"/>
+        </FlipView>
+
+
+
     </Grid>
 </Page>
