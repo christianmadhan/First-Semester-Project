@@ -11,7 +11,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
-            <RowDefinition Height="240"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="200"/>
             <RowDefinition/>
 
@@ -28,18 +28,30 @@
         </Border>
 
         <FlipView Grid.Row="1">
-            <FlipView.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </FlipView.RenderTransform>
             <Image Source="../Assets/batman.jpg" Stretch="Fill"/>
             <Image Source="../Assets/fightclub.jpg" Stretch="Fill"/>
             <Image Source="../Assets/forrestGump.jpg" Stretch="Fill"/>
         </FlipView>
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel>
+                <ListView ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                         ScrollViewer.VerticalScrollMode="Disabled"
+                         ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <Image Source="../Assets/superman.jpg" />
+                    <Image Source="../Assets/superman.jpg" />
+                    <Image Source="../Assets/superman.jpg" />
+
+                </ListView>
+            </StackPanel>
+        </StackPanel>
+        
+        
 
 
 
