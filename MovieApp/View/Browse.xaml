@@ -7,7 +7,43 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#d8d8d8">
+        
+        <!--Columns and Rows-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.10*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        
+        <Border BorderThickness="0,0,0,11" Grid.ColumnSpan="6" BorderBrush="#773438">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Home" Margin="10,16,10,0" Foreground="#8c4e54" FontSize="20"/>
+                    <TextBlock Text="Browse" Margin="0,16,10,0" Foreground="White" FontSize="20"/>
+                    <TextBlock Text="About" Margin="0,16,10,-0.2" Foreground="White" FontSize="20" Height="53" VerticalAlignment="Top" />
+                    <TextBlock Text="Admin" Margin="0,16,10,0" Foreground="White" FontSize="20" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+
 
     </Grid>
 </Page>
