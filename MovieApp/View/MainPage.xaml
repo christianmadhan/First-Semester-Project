@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
- 
+
 
     <Grid Background="#d8d8d8">
 
@@ -23,24 +23,24 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Home" Margin="10,16,10,0" Foreground="#8c4e54" FontSize="20"/>
                     <TextBlock Text="Browse" Margin="0,16,10,0" Foreground="White" FontSize="20"/>
-                    <TextBlock Text="About" Margin="0,16,10,0" Foreground="White" FontSize="20" />
+                    <TextBlock Text="About" Margin="0,16,10,-0.2" Foreground="White" FontSize="20" Height="53" VerticalAlignment="Top" />
                     <TextBlock Text="Admin" Margin="0,16,10,0" Foreground="White" FontSize="20" />
                 </StackPanel>
             </StackPanel>
         </Border>
 
-        
-            <FlipView Grid.Row="1" Width="700" HorizontalAlignment="Left">
-                <Image Source="../Assets/batman.jpg" Stretch="UniformToFill"/>
-                <Image Source="../Assets/fightclub.jpg" Stretch="UniformToFill"/>
-                <Image Source="../Assets/forrestGump.jpg" Stretch="UniformToFill"/>
-            </FlipView>
+
+        <FlipView Grid.Row="1" Width="700" HorizontalAlignment="Left">
+            <Image Source="../Assets/batman.jpg" Stretch="UniformToFill"/>
+            <Image Source="../Assets/fightclub.jpg" Stretch="UniformToFill"/>
+            <Image Source="../Assets/forrestGump.jpg" Stretch="UniformToFill"/>
+        </FlipView>
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Right" Width="580" Background="#353535">
-              <TextBlock Text=""/>
-         </StackPanel>
-        
-         
+            <TextBlock Text=""/>
+        </StackPanel>
+
+
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel>
@@ -56,22 +56,22 @@
                         <Image Source="../Assets/jumani.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
                         <TextBlock Text=" 12/12/2017" TextAlignment="Center"/>
                     </StackPanel>
-                    
+
                     <StackPanel>
                         <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
                         <TextBlock Text=" 12/12/2017"/>
                     </StackPanel>
-                    
+
                     <StackPanel>
                         <Image Source="../Assets/daddyHome.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
                         <TextBlock Text="12/12/2017"/>
                     </StackPanel>
-                    
+
                     <StackPanel>
                         <Image Source="../Assets/avenger.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
                         <TextBlock Text="12/12/2017"/>
                     </StackPanel>
-                    
+
                     <StackPanel>
                         <Image Source="../Assets/Starwars.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
                         <TextBlock Text="12/12/2017"/>
@@ -84,11 +84,11 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Background="#773438">
-          <StackPanel>
-              <TextBlock/>
-              <TextBlock/>
+            <StackPanel>
+                <TextBlock/>
+                <TextBlock/>
             </StackPanel>
-      </StackPanel>
+        </StackPanel>
 
 
 
