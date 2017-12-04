@@ -19,12 +19,13 @@
         </Grid.RowDefinitions>
 
         <Border BorderThickness="0,0,0,11" BorderBrush="#773438">
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535" Margin="0,0,0,-12.2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Home" Margin="10,16,10,0" Foreground="#8c4e54" FontSize="20"/>
                     <TextBlock Text="Browse" Margin="0,16,10,0" Foreground="White" FontSize="20"/>
                     <TextBlock Text="About" Margin="0,16,10,-0.2" Foreground="White" FontSize="20" Height="53" VerticalAlignment="Top" />
                     <TextBlock Text="Admin" Margin="0,16,10,0" Foreground="White" FontSize="20" />
+                    <Button Content="TEST" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="81" Margin="0,0,0,-0.2" Click="Button_Click"/>
                 </StackPanel>
             </StackPanel>
         </Border>
