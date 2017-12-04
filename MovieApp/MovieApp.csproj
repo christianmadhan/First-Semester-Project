@@ -107,11 +107,15 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Assets\UmbrellaAssets\splash.psd" />
     <None Include="MovieApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +133,10 @@
     <Content Include="Assets\superman.jpg" />
     <Content Include="Assets\surf.jpg" />
     <Content Include="Assets\thor.jpg" />
+    <Content Include="Assets\UmbrellaAssets\logoTransparent.png" />
+    <Content Include="Assets\UmbrellaAssets\logowhite.png" />
+    <Content Include="Assets\UmbrellaAssets\splash.png" />
+    <Content Include="Assets\UmbrellaAssets\splashBG.png" />
     <Content Include="Business\Conceptual Diagram.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -152,6 +160,10 @@
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
