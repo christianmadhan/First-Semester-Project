@@ -12,7 +12,7 @@ namespace MovieApp.Model
         // Description about the movie
         public string _imageUrl { get; set; }
         private string _title;
-        private string _instructor;
+        private string _director;
         private string _length;
         private string _genre;
         private string _actors;
@@ -21,11 +21,11 @@ namespace MovieApp.Model
         
 
         // Constructer.
-        public Movie(string imageUrl,string title, string instructor, string lenght, string genre, string actors, string censorship, string description)
+        public Movie(string imageUrl,string title, string director, string lenght, string genre, string actors, string censorship, string description)
         {
             _imageUrl = imageUrl;
             _title = title;
-            _instructor = instructor;
+            _director = director;
             _length = lenght;
             _actors = actors;
             _censorship = censorship;
@@ -43,10 +43,10 @@ namespace MovieApp.Model
             set { _title = value; OnPropertyChanged(Title); }
         }
 
-        public string Instructor
+        public string Director
         {
-            get { return _instructor; }
-            set { _instructor = value; OnPropertyChanged(Instructor); }
+            get { return _director; }
+            set { _director = value; OnPropertyChanged(Director); }
         }
 
         public string Length
@@ -84,8 +84,9 @@ namespace MovieApp.Model
         public override string ToString()
         {
             return "Title: " + Title + "\n" +
-                   "Instructor: " + Instructor + "\n" +
+                   "Director: " + Director + "\n" +
                    "Length: " + Length + "\n" +
+                   "Genre: " + Genre + "\n" +
                    "Actors: " + Actors + "\n" +
                    "Censorship:  " + Censorship + "\n" +
                    "Description:  " + Description;

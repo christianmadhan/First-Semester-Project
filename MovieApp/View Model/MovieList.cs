@@ -10,14 +10,20 @@ namespace MovieApp.View_Model
 {
     class MovieList
     {
+        // The collection of all the movies, the list that is displayed in the view.
         public ObservableCollection<Movie> Movies { get; set; }
 
+        // Only accessible for the admin
         public RelayCommand AddItem { get; set; }
 
+        // Only accessible for the admin
         public RelayCommand DeleMovie { get; set; }
 
+        // Only accessible for the admin
         public Movie AddNewMovie { get; set; }
 
+
+        // Create some movies to be in the list at the beginning of the program.
         public MovieList()
         {
             Movies = new ObservableCollection<Movie>()
