@@ -22,27 +22,26 @@ namespace MovieApp.View_Model
         {
             Movies = new ObservableCollection<Movie>()
             {
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\n Best movie ever"),
-                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\n Best movie ever"),
+                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
 
             };
         }
-
 
     }
 }

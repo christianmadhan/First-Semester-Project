@@ -14,13 +14,14 @@ namespace MovieApp.Model
         private string _title;
         private string _instructor;
         private string _length;
+        private string _genre;
         private string _actors;
         private string _censorship;
         private string _description;
         
 
         // Constructer.
-        public Movie(string imageUrl,string title, string instructor, string lenght, string actors, string censorship, string description)
+        public Movie(string imageUrl,string title, string instructor, string lenght, string genre, string actors, string censorship, string description)
         {
             _imageUrl = imageUrl;
             _title = title;
@@ -29,6 +30,7 @@ namespace MovieApp.Model
             _actors = actors;
             _censorship = censorship;
             _description = description;
+            _genre = genre;
         }
 
         //--------------------------------------------
@@ -69,6 +71,11 @@ namespace MovieApp.Model
         {
             get { return _description; }
             set { _description = value; OnPropertyChanged(Description);}
+        }
+        public string Genre
+        {
+            get { return _genre; }
+            set { _genre = value; OnPropertyChanged(Genre); }
         }
 
 
