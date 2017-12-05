@@ -36,9 +36,31 @@ namespace MovieApp
             coreTitleBar.ExtendViewIntoTitleBar = true;
         }
 
+
+protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            int change = 1;
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(2);
+            timer.Tick += (o, a) =>
+            {
+                // If we'd go out of bounds then reverse
+                int newIndex = MovieFlip.SelectedIndex + change;
+                if (newIndex >= MovieFlip.Items.Count || newIndex < 0)
+                {
+                    change *= -1;
+                }
+
+                MovieFlip.SelectedIndex += change;
+            };
+            timer.Start();
+        }
+
         private void GoToBrowse(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Browse));
         }
+        
     }
 }
