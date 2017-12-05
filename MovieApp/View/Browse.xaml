@@ -47,7 +47,7 @@
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <StackPanel>
-                        <Image Source="../Assets/jumani.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/jumani.jpg"  Margin="0,30,20,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
