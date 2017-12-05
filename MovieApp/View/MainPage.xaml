@@ -12,9 +12,9 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="300"/>
-            <RowDefinition />
+            <RowDefinition Height="325"/>
+            <RowDefinition Height="325"/>
+            <RowDefinition Height="200" />
 
         </Grid.RowDefinitions>
 
@@ -90,7 +90,8 @@
             </StackPanel>
         </StackPanel>
 
-
+     <TextBlock Text="Use our special promo code for 20% off all purchases." Grid.Row="3"/>
+     <TextBlock Text="Happy Holidays" Grid.Row="3" Margin="0,20,0,0"/>
 
     </Grid>
 </Page>
