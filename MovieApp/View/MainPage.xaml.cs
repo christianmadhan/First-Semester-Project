@@ -36,9 +36,9 @@ namespace MovieApp
             coreTitleBar.ExtendViewIntoTitleBar = true;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void GoToBrowse(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Browse));
+            Frame.Navigate(typeof(Browse));
         }
     }
 }
