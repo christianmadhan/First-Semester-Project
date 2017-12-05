@@ -10,6 +10,7 @@ namespace MovieApp.Model
     {
         
         // Description about the movie
+        public string _imageUrl { get; set; }
         private string _title;
         private string _instructor;
         private string _length;
@@ -19,8 +20,9 @@ namespace MovieApp.Model
         
 
         // Constructer.
-        public Movie(string title, string instructor, string lenght, string actors, string censorship, string description)
+        public Movie(string imageUrl,string title, string instructor, string lenght, string actors, string censorship, string description)
         {
+            _imageUrl = imageUrl;
             _title = title;
             _instructor = instructor;
             _length = lenght;
@@ -32,7 +34,7 @@ namespace MovieApp.Model
         //--------------------------------------------
         // Get, Set and OnpropertyChanged
         //--------------------------------------------
-
+      
         public string Title
         {
             get { return _title; }
