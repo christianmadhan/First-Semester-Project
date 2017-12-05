@@ -90,8 +90,8 @@
             </StackPanel>
         </StackPanel>
 
-     <TextBlock Text="Use our special promo code for 20% off all purchases." Grid.Row="3"/>
-     <TextBlock Text="Happy Holidays" Grid.Row="3" Margin="0,20,0,0"/>
+        <TextBlock Text="Use our special promo code for 20% off all purchases." Grid.Row="3" FontWeight="Bold"  TextAlignment="Center" FontSize="18" Foreground="#FFFDF7F7"   />
+     <TextBlock Text="Happy Holidays" Grid.Row="3" Margin="0,20,0,0" FontWeight="Bold"  TextAlignment="Center" FontSize="18" Foreground="#FFFDF7F7" />
 
     </Grid>
 </Page>
