@@ -17,8 +17,8 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="247*"/>
 
         </Grid.ColumnDefinitions>
 
@@ -36,7 +36,7 @@
         </Border>
 
 
-        <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="250,91,5 5" Grid.RowSpan="3" Width="1100">
+        <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-1187,91,-1381,-95" Grid.RowSpan="3" Width="1102">
             <StackPanel>
                 <ListView ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
                           ScrollViewer.VerticalScrollMode="Disabled"
@@ -47,27 +47,27 @@
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <StackPanel>
-                        <Image Source="../Assets/jumani.jpg"  Margin="0,30,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/jumani.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/daddyHome.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/daddyHome.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/avenger.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/avenger.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/Starwars.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/Starwars.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
@@ -77,7 +77,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="250,0.4,5,5" Width="1100">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="33.2,0.4,102,5" Width="1100" Grid.Column="2">
             <StackPanel Height="454" Margin="0,0,-344.6,0">
                 <ListView ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
                           ScrollViewer.VerticalScrollMode="Disabled"
@@ -88,37 +88,36 @@
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <StackPanel>
-                        <Image Source="../Assets/jumani.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/jumani.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title" TextAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/daddyHome.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/daddyHome.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/avenger.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/avenger.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
 
                     <StackPanel>
-                        <Image Source="../Assets/Starwars.jpg"  Margin="0,0,20,0" Stretch="Fill" Height="250"/>
+                        <Image Source="../Assets/Starwars.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
                         <TextBlock Text="Title"/>
                     </StackPanel>
-
-
-
                 </ListView>
             </StackPanel>
         </StackPanel>
 
-        
-        
+
+       
+
+
     </Grid>
 </Page>
