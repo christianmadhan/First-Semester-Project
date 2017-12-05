@@ -27,93 +27,14 @@
         <Border BorderThickness="0,0,0,11" Grid.ColumnSpan="3" BorderBrush="#773438" Margin="0,0,0,1.2">
             <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Home" Margin="10,16,10,0" Foreground="#8c4e54" FontSize="20"/>
-                    <TextBlock Text="Browse" Margin="0,16,10,0" Foreground="White" FontSize="20"/>
-                    <TextBlock Text="About" Margin="0,16,10,-0.2" Foreground="White" FontSize="20" Height="53" VerticalAlignment="Top" />
-                    <TextBlock Text="Admin" Margin="0,16,10,0" Foreground="White" FontSize="20" />
+                    <Button Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Height="55"/>
+                    <Button Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
+                    <Button Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
+                    <Button Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535"  />
                 </StackPanel>
             </StackPanel>
         </Border>
 
-
-        <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-1187,91,-1381,-95" Grid.RowSpan="3" Width="1102">
-            <StackPanel>
-                <ListView ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                          ScrollViewer.VerticalScrollMode="Disabled"
-                          ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="10,40,0,0">
-                    <ListView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <ItemsStackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
-                        </ItemsPanelTemplate>
-                    </ListView.ItemsPanel>
-                    <StackPanel>
-                        <Image Source="../Assets/jumani.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/daddyHome.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/avenger.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/Starwars.jpg"  Margin="0,25,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-
-
-                </ListView>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="33.2,0.4,102,5" Width="1100" Grid.Column="2">
-            <StackPanel Height="454" Margin="0,0,-344.6,0">
-                <ListView ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                          ScrollViewer.VerticalScrollMode="Disabled"
-                          ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="10,40,0,0">
-                    <ListView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <ItemsStackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
-                        </ItemsPanelTemplate>
-                    </ListView.ItemsPanel>
-                    <StackPanel>
-                        <Image Source="../Assets/jumani.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title" TextAlignment="Center"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/daddyHome.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/avenger.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/Starwars.jpg"  Margin="0,0,35,0" Stretch="Fill" Height="250"/>
-                        <TextBlock Text="Title"/>
-                    </StackPanel>
-                </ListView>
-            </StackPanel>
-        </StackPanel>
 
 
        
