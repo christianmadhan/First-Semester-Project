@@ -82,7 +82,8 @@
                 </ListView>
             </StackPanel>
         </StackPanel>
-
+            
+        <!--promo code text -->
         <StackPanel Grid.Row="3" Background="#773438">
             <StackPanel>
                 <StackPanel>
