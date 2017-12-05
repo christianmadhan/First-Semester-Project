@@ -121,12 +121,17 @@
     <None Include="MovieApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\650608.jpg" />
     <Content Include="Assets\avenger.jpg" />
     <Content Include="Assets\babies.jpg" />
     <Content Include="Assets\batman.jpg" />
     <Content Include="Assets\daddyHome.jpg" />
+    <Content Include="Assets\darkknight.jpg" />
+    <Content Include="Assets\Dunkirkk.jpg" />
     <Content Include="Assets\fightclub.jpg" />
     <Content Include="Assets\forrestGump.jpg" />
+    <Content Include="Assets\Godfatherr.jpg" />
+    <Content Include="Assets\inceptionn.jpg" />
     <Content Include="Assets\jumani.jpg" />
     <Content Include="Assets\JusticeLeague.jpg" />
     <Content Include="Assets\shark.jpg" />

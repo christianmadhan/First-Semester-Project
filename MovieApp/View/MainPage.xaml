@@ -30,15 +30,14 @@
         </Border>
 
 
-        <FlipView Grid.Row="1" Width="700" HorizontalAlignment="Left">
-            <Image Source="../Assets/batman.jpg" Stretch="UniformToFill"/>
-            <Image Source="../Assets/fightclub.jpg" Stretch="UniformToFill"/>
-            <Image Source="../Assets/forrestGump.jpg" Stretch="UniformToFill"/>
+        <FlipView Grid.Row="1" Width="1275" HorizontalAlignment="Center" x:Name="MovieFlip">
+            <Image Source="ms-appx:///Assets/Dunkirkk.jpg" Stretch="UniformToFill"/>
+            <Image Source="ms-appx:///Assets/Godfatherr.jpg" Stretch="UniformToFill"/>
+            <Image Source="ms-appx:///Assets/650608.jpg" Stretch="UniformToFill"/>
+            <Image Source="ms-appx:///Assets/inceptionn.jpg" Stretch="UniformToFill"/>
+            <Image Source="ms-appx:///Assets/fightclub.jpg" Stretch="UniformToFill"/>
+            <Image Source="ms-appx:///Assets/darkknight.jpg" Stretch="UniformToFill"/>
         </FlipView>
-
-        <StackPanel Grid.Row="1" HorizontalAlignment="Right" Width="580" Background="#353535">
-            <TextBlock Text=""/>
-        </StackPanel>
 
 
 
