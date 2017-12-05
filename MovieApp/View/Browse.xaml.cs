@@ -26,5 +26,10 @@ namespace MovieApp.View
         {
             this.InitializeComponent();
         }
+
+        private void GoHome(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }
