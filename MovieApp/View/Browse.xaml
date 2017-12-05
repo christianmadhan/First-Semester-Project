@@ -59,10 +59,20 @@
                         <ItemsWrapGrid  Orientation="Horizontal" MaximumRowsOrColumns="3"/>
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
-
             </ListView>
+        </StackPanel>
+        
+        <!-- Filter Box -->
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" >
+            <StackPanel Margin="10,0,0,0">
+                <Border BorderBrush="#773438" BorderThickness="0,0,0,10">
+                    <TextBlock Text="Search" TextAlignment="Center" Margin="0,10,0,0"/>
+                </Border>
+                <TextBlock Text="Genres:" Margin="0,10,0,0"/>
+            </StackPanel>
+            
+            
 
-           
         </StackPanel>
 
 
@@ -72,3 +82,4 @@
 
     </Grid>
 </Page>
+
