@@ -12,9 +12,9 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
-            <RowDefinition Height="330"/>
-            <RowDefinition Height="330"/>
-            <RowDefinition Height="180" />
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="200" />
 
         </Grid.RowDefinitions>
 
@@ -85,15 +85,16 @@
 
         <StackPanel Grid.Row="3" Background="#773438">
             <StackPanel>
-                <TextBlock/>
-                <TextBlock/>
+                <StackPanel>
+                    <TextBlock Text="Use our special promo code for 20% off all purchases." FontWeight="Bold"  TextAlignment="Center" FontSize="18" Foreground="#FFFDF7F7"/>
+                    <TextBlock Text="Happy Holidays" Grid.Row="3" Margin="0,20,0,0" FontWeight="Bold"  TextAlignment="Center" FontSize="18" Foreground="#FFFDF7F7"/>
+
+                    <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Height="80" Width="200" HorizontalAlignment="Left"/>
+                    <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Height="80" Width="200" HorizontalAlignment="Right"/>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
 
-        <TextBlock Text="Use our special promo code for 20% off all purchases." Grid.Row="3" FontWeight="Bold"  TextAlignment="Center" FontSize="18" Foreground="#FFFDF7F7"   />
-     <TextBlock Text="Happy Holidays" Grid.Row="3" Margin="0,20,0,0" FontWeight="Bold"  TextAlignment="Center" FontSize="18" Foreground="#FFFDF7F7" />
 
-       <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Grid.Row="3" Height="80" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Grid.Row="3" Height="80" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right"/>
     </Grid>
 </Page>
