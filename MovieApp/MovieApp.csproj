@@ -135,6 +135,7 @@
     <Content Include="Assets\superman.jpg" />
     <Content Include="Assets\surf.jpg" />
     <Content Include="Assets\thor.jpg" />
+    <Content Include="Assets\UmbrellaAssets\Christmasdec1.jpg" />
     <Content Include="Assets\UmbrellaAssets\logoTransparent.png" />
     <Content Include="Assets\UmbrellaAssets\logowhite.png" />
     <Content Include="Assets\UmbrellaAssets\splash.png" />
