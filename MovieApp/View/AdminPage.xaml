@@ -5,9 +5,76 @@
     xmlns:local="using:MovieApp.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:MovieApp.View_Model"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#d8d8d8">
+    
+        
+
+        <Grid.DataContext>
+            <viewModel:MovieList/>
+        </Grid.DataContext>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="270"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Column="0">
+            <Image Source="../Assets/logoTransparent.png"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Background="#353535">
+            <Image Source="../Assets/logoTransparent.png" Height="200"/>
+            <StackPanel>
+                <TextBlock Text="Image Url" TextAlignment="Center" Foreground="#d8d8d8"/>
+                <TextBox Width="240"/>
+                <TextBlock Text="Title" TextAlignment="Center"  Foreground="#d8d8d8"/>
+                <TextBox Width="240"/>
+                <TextBlock Text="Director" TextAlignment="Center"  Foreground="#d8d8d8"/>
+                <TextBox Width="240"/>
+                <TextBlock Text="Lenght" TextAlignment="Center"  Foreground="#d8d8d8"/>
+                <TextBox Width="240"/>
+                <TextBlock Text="Genre" TextAlignment="Center"  Foreground="#d8d8d8"/>
+                <TextBox Width="240"/>
+                <TextBlock Text="Actors" TextAlignment="Center"  Foreground="#d8d8d8"/>
+                <TextBox Width="240"/>
+                <TextBlock Text="Censorship" TextAlignment="Center" Foreground="#d8d8d8"/>
+                <TextBox Width="240"/>
+                <TextBlock Text="Description" TextAlignment="Center"  Foreground="#d8d8d8"/>
+                <TextBox Width="240" Height="100" TextWrapping="Wrap" AcceptsReturn="True" />
+                <Button Content="Add Movie" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Orientation="Horizontal">
+            <ListView ItemsSource="{Binding Movies}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,10,10">
+                            <StackPanel>
+                                <Image Source="{Binding _imageUrl}"/>
+                                <TextBlock Text="{Binding}" FontWeight="Bold" />
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="4"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+        </StackPanel>
+
 
     </Grid>
 </Page>

@@ -35,5 +35,10 @@ namespace MovieApp.View
                 Frame.Navigate(typeof(AdminPage));
             }
         }
+
+        private void BackToMainPage(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

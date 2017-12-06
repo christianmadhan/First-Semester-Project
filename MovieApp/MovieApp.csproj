@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\650608.jpg" />
+    <Content Include="Assets\adminBackground.jpeg" />
     <Content Include="Assets\avenger.jpg" />
     <Content Include="Assets\babies.jpg" />
     <Content Include="Assets\batman.jpg" />
@@ -140,6 +141,7 @@
     <Content Include="Assets\inceptionn.jpg" />
     <Content Include="Assets\jumani.jpg" />
     <Content Include="Assets\JusticeLeague.jpg" />
+    <Content Include="Assets\logoTransparent.png" />
     <Content Include="Assets\shark.jpg" />
     <Content Include="Assets\Starwars.jpg" />
     <Content Include="Assets\strange.jpg" />
