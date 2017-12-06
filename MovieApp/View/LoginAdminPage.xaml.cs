@@ -38,7 +38,7 @@ namespace MovieApp.View
 
         private void BackToMainPage(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(Browse));
         }
     }
 }

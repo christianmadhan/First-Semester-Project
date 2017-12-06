@@ -77,8 +77,6 @@
                         <TextBlock Text="12/12/2017"/>
                     </StackPanel>
 
-
-
                 </ListView>
             </StackPanel>
         </StackPanel>
@@ -88,7 +86,7 @@
             <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,0,0"/>
             <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Height="80" Width="200" HorizontalAlignment="Left" Margin="0,-80,0,0"/>
             <TextBlock Text="Use our special promo code (1Forrest1) for 20% off all purchases." FontWeight="Bold"  TextAlignment="Center" FontSize="23" Foreground="#FFFDF7F7" Margin="0,-70,0,0" FontFamily="Curlz MT"/>
-            <TextBlock Text="Happy Holidays" Grid.Row="3" Margin="0,-45,0,0" FontWeight="Bold"  TextAlignment="Center" FontSize="23" Foreground="#FFFDF7F7" FontFamily="Curlz MT"/>
+            <TextBlock Text="Happy Holidays" Margin="0,-45,0,0" FontWeight="Bold"  TextAlignment="Center" FontSize="23" Foreground="#FFFDF7F7" FontFamily="Curlz MT"/>
         </StackPanel>
        
 
