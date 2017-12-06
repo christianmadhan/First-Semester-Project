@@ -26,5 +26,10 @@ namespace MovieApp.View
         {
             this.InitializeComponent();
         }
+
+        private void BackToBrowse(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Browse));
+        }
     }
 }
