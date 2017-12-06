@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Audio;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,13 +29,19 @@ namespace MovieApp.View
             this.InitializeComponent();
         }
 
-        private void LoginToAdminPage(object sender, RoutedEventArgs e)
+        private async void LoginToAdminPage(object sender, RoutedEventArgs e)
         {
             if (userNameBox.Text == "root" && PasswordBox.Password == "123")
             {
                 Frame.Navigate(typeof(AdminPage));
             }
+            else
+            {
+                var dialog = new MessageDialog("Wrong Username or Password");
+                await dialog.ShowAsync();
+            }
         }
+        
 
         private void BackToMainPage(object sender, RoutedEventArgs e)
         {
