@@ -31,5 +31,10 @@ namespace MovieApp.View
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void GoToAdminPage(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginAdminPage));
+        }
     }
 }

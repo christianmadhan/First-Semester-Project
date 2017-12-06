@@ -25,7 +25,7 @@
                     <Button Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
                     <Button Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoToBrowse"/>
                     <Button Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
-                    <Button Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535"  />
+                    <Button Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoToAdminPage"  />
                 </StackPanel>
             </StackPanel>
         </Border>
