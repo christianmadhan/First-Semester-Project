@@ -51,7 +51,7 @@
                 <TextBox Width="240"/>
                 <TextBlock Text="Description" TextAlignment="Center"  Foreground="#d8d8d8"/>
                 <TextBox Width="240" Height="100" TextWrapping="Wrap" AcceptsReturn="True" />
-                <Button Content="Add Movie" HorizontalAlignment="Center"/>
+                <Button Content="Add Movie" HorizontalAlignment="Center" Margin="0,10,0,0" Background="#773438" Foreground="White"/>
             </StackPanel>
         </StackPanel>
         
@@ -60,7 +60,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="0,0,10,10">
-                            <StackPanel>
+                            <StackPanel Orientation="Horizontal">
                                 <Image Source="{Binding _imageUrl}"/>
                                 <TextBlock Text="{Binding}" FontWeight="Bold" />
                             </StackPanel>
@@ -69,7 +69,7 @@
                 </ListView.ItemTemplate>
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="4"/>
+                        <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3"/>
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
             </ListView>
