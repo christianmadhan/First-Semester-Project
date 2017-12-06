@@ -33,6 +33,9 @@ namespace MovieApp.Model
             _genre = genre;
         }
 
+        // Needed to add an empty contructer for the relay Command.
+        public Movie() { }
+
         //--------------------------------------------
         // Get, Set and OnpropertyChanged
         //--------------------------------------------
