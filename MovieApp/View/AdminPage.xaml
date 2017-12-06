@@ -9,8 +9,8 @@
     mc:Ignorable="d">
 
     <Grid Background="#d8d8d8">
-    
-        
+
+
 
         <Grid.DataContext>
             <viewModel:MovieList/>
@@ -21,13 +21,13 @@
             <ColumnDefinition Width="270"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <StackPanel Grid.Column="0">
             <Image Source="../Assets/logoTransparent.png"/>
         </StackPanel>
@@ -51,10 +51,17 @@
                 <TextBox Width="240"/>
                 <TextBlock Text="Description" TextAlignment="Center"  Foreground="#d8d8d8"/>
                 <TextBox Width="240" Height="100" TextWrapping="Wrap" AcceptsReturn="True" />
-                <Button Content="Add Movie" HorizontalAlignment="Center" Margin="0,10,0,0" Background="#773438" Foreground="White"/>
+                <Button Content="Add Movie" HorizontalAlignment="Center" Margin="0,10,0,0" Foreground="White">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FFC53030" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
             </StackPanel>
         </StackPanel>
-        
+
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Orientation="Horizontal">
             <ListView ItemsSource="{Binding Movies}">
                 <ListView.ItemTemplate>

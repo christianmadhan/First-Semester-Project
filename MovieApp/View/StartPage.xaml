@@ -23,11 +23,11 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-    
+
         <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Source="../Assets/UmbrellaAssets/logoTransparent.png" />
         <Button Grid.Column="1" Grid.Row="3" Name="startButton" Content="Take a seat" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                FontFamily="Code" FontSize="50" Click="StartButton_OnClick"/>
-        
-        
+                FontFamily="Times New Roman" FontSize="50" Click="StartButton_OnClick" Background="#33CD2D2D"/>
+
+
     </Grid>
 </Page>
