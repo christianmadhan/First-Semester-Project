@@ -6,10 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="../Assets/UmbrellaAssets/splashBG.png"></ImageBrush>
-        </Grid.Background>
+    <Grid Background="#d8d8d8">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -24,9 +22,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Source="../Assets/UmbrellaAssets/logoTransparent.png" />
+        <Image Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Source="../Assets/UmbrellaAssets/logoTransparent.png" Stretch="UniformToFill" HorizontalAlignment="Center"/>
         <Button Grid.Column="1" Grid.Row="3" Name="startButton" Content="Take a seat" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                FontFamily="Times New Roman" FontSize="50" Click="StartButton_OnClick" Background="#33CD2D2D"/>
+                FontFamily="Helvetica" FontSize="50" Click="StartButton_OnClick" Background="#33CD2D2D"/>
 
 
     </Grid>

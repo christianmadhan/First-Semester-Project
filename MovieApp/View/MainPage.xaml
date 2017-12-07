@@ -12,84 +12,20 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="350"/>
-            <RowDefinition Height="300"/>
-            <RowDefinition Height="200" />
-
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Border BorderThickness="0,0,0,11" BorderBrush="#773438">
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535">
+        <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Background="#353535">
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
-                    <Button Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoToBrowse"/>
-                    <Button Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535"  Click="GoToAbout"/>
-                    <Button Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoToAdminPage"  />
+                    <Button Name="homeButton" Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="HomeButton_OnClick"/>
+                    <Button Name="browseButton" Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="BrowseButton_OnClick"/>
+                    <Button Name="aboutButton" Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="AboutButton_OnClick" />
+                    <Button Name="adminButton" Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535"  Click="AdminButton_OnClick"/>
                 </StackPanel>
             </StackPanel>
         </Border>
-
-
-        <FlipView Grid.Row="1" Width="1275" HorizontalAlignment="Center" x:Name="MovieFlip">
-            <Image Source="ms-appx:///Assets/Dunkirkk.jpg" Stretch="UniformToFill"/>
-            <Image Source="ms-appx:///Assets/Godfatherr.jpg" Stretch="UniformToFill"/>
-            <Image Source="ms-appx:///Assets/650608.jpg" Stretch="UniformToFill"/>
-            <Image Source="ms-appx:///Assets/inceptionn.jpg" Stretch="UniformToFill"/>
-            <Image Source="ms-appx:///Assets/fightclub.jpg" Stretch="UniformToFill"/>
-            <Image Source="ms-appx:///Assets/darkknight.jpg" Stretch="UniformToFill"/>
-        </FlipView>
-
-
-
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel>
-                <ListView ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                         ScrollViewer.VerticalScrollMode="Disabled"
-                         ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="10,40,0,0">
-                    <ListView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <ItemsStackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
-                        </ItemsPanelTemplate>
-                    </ListView.ItemsPanel>
-                    <StackPanel>
-                        <Image Source="../Assets/jumani.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
-                        <TextBlock Text=" 12/12/2017" TextAlignment="Center"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/JusticeLeague.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
-                        <TextBlock Text=" 12/12/2017"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/daddyHome.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
-                        <TextBlock Text="12/12/2017"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/avenger.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
-                        <TextBlock Text="12/12/2017"/>
-                    </StackPanel>
-
-                    <StackPanel>
-                        <Image Source="../Assets/Starwars.jpg"  Margin="0,0,20,0" Stretch="Fill"/>
-                        <TextBlock Text="12/12/2017"/>
-                    </StackPanel>
-
-                </ListView>
-            </StackPanel>
-        </StackPanel>
-            
-        <!--promo code text -->
-        <StackPanel Grid.Row="3" Background="#773438" Height="200">
-            <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Height="80" Width="200" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-            <Image Source="../Assets/UmbrellaAssets/Christmasdec1.jpg" Height="80" Width="200" HorizontalAlignment="Left" Margin="0,-80,0,0"/>
-            <TextBlock Text="Use our special promo code (1Forrest1) for 20% off all purchases." FontWeight="Bold"  TextAlignment="Center" FontSize="23" Foreground="#FFFDF7F7" Margin="0,-70,0,0" FontFamily="Curlz MT"/>
-            <TextBlock Text="Happy Holidays" Margin="0,-45,0,0" FontWeight="Bold"  TextAlignment="Center" FontSize="23" Foreground="#FFFDF7F7" FontFamily="Curlz MT"/>
-        </StackPanel>
-       
-
-
+        <Frame Name="mainFrame" Grid.Row="1"/>
     </Grid>
 </Page>

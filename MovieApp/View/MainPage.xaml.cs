@@ -36,40 +36,36 @@ namespace MovieApp
             coreTitleBar.ExtendViewIntoTitleBar = true;
         }
 
-
-protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            int change = 1;
+            mainFrame.Navigate(typeof(Home));
+        }
 
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(2);
-            timer.Tick += (o, a) =>
+        private void HomeButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(Home));
+        }
+
+        private void BrowseButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(Browse));
+        }
+
+        private void AboutButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(About));
+        }
+
+        private void AdminButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if ((App.Current as App).adminSession)
             {
-                // If we'd go out of bounds then reverse
-                int newIndex = MovieFlip.SelectedIndex + change;
-                if (newIndex >= MovieFlip.Items.Count || newIndex < 0)
-                {
-                    change *= -1;
-                }
-
-                MovieFlip.SelectedIndex += change;
-            };
-            timer.Start();
-        }
-
-        private void GoToBrowse(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Browse));
-        }
-
-        private void GoToAdminPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(LoginAdminPage));
-        }
-
-        private void GoToAbout(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(About));
+                mainFrame.Navigate(typeof(AdminPage));
+            }
+            else
+            {
+                mainFrame.Navigate(typeof(LoginAdminPage));
+            }
         }
     }
 }

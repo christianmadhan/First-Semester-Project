@@ -15,51 +15,50 @@
     </Page.Resources>
 
     <Grid Background="#d8d8d8">
-
-        
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="350"/>
-            <RowDefinition Height="190"/>
-            <RowDefinition Height="200" />
-
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <Border BorderThickness="0,0,0,11" BorderBrush="#773438">
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535">
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Source="../Assets/UmbrellaAssets/logoTransparent.png"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" VerticalAlignment="Center">
+          <TextBlock.Text>
+              Ruby is a theatre company developed in Copenhagen. The company was officialy founded by two brothers John and Jake Cook in 1990.
+              Being first based in the city of Roskilde, as years past by the company started to spread its businessall over Denmark
+              and after 1993 they established theatres in Germany, UK, France, Italy and whole region of Scandinavia. &#x0a; 
+            </TextBlock.Text>
+        </TextBlock>
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" FontSize="20">
+            <TextBlock.Text>
+                It has grown rapidly to achieve a revenue of 11.9 million in 1995 after premier of first animated movie in history 
+                of cinematography &quot;Toy story&quot;.The company employs 872 staff in all theathers.
+            </TextBlock.Text>
+        </TextBlock>
+
+        <Image Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Source="../Assets/interior.jpg" Margin="20" Stretch="UniformToFill"/>
+            <!--promo code text -->
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="4" Background="#773438" Height="200" Orientation="Horizontal">
+            <ListView >
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsStackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535"   Click="GoToHome"/>
-                    <Button Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoToBrowse"/>
-                    <Button Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535"  Click="GoToAbout"/>
-                    <Button Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoToAdminPage"  />
+                    <Image Source="../Assets/Dolby-digital-logo.png" Height="100" Width="150" Margin="150,0,0,0"/>
+                    <Image Source="../Assets/cineworld.png" Height="150" Width="200" Margin="100,0,0,0"/>
+                    <Image Source="../Assets/paramount.png" Height="200" Width="200" Margin="100,0,0,0"/>
+                    <Image Source="../Assets/popcorn.png" Height="100" Width="100" Margin="100,0,0,0"/>
                 </StackPanel>
-            </StackPanel>
-        </Border>
-        <StackPanel Grid.Row="1">
-            <TextBlock TextWrapping="Wrap" Height="434" Margin="20,200,536,0" FontFamily="Tahoma" >
-                Ruby is a theatre company developed in Copenhagen.The company was officialy founded by two brothers John and Jake Cook in 1990. 
-                Being first based in the city of Roskilde, as years past by the company started to spread its business all over Denmark and after 1993 they established theatres in Germany,UK,France,Italy and whole region of Scandinavia.It has grown rapidly to achieve a revenue of 11.9 million in 1995 after premier of first animated movie in history of cinematography "Toy story".The company employs 872 staff in all theathers.
-
-            </TextBlock>
-        </StackPanel>
-
-
-        <!--promo code text -->
-        <StackPanel Grid.Row="3" Background="#773438" Height="200">
-
-        </StackPanel>
-        <Image HorizontalAlignment="Left" Source="ms-appx:///Assets/sfi-hq.jpg" Height="338" Margin="761,60,0,-387" Grid.RowSpan="3" Grid.Row="1" VerticalAlignment="Top" Width="508"/>
-
-        <Image HorizontalAlignment="Left" Height="176" Source="ms-appx:///Assets/logoTransparent.png" Margin="269,83,0,-259" Grid.RowSpan="4" VerticalAlignment="Top" Width="204"/>
-
-    <!--promo code text -->
-        <StackPanel Grid.Row="3" Background="#773438" Height="200">
-        <Image Source="../Assets/Dolby-digital-logo.png" Height="80" Width="200" Margin="-50,50,1000,10"/>
-        <Image Source="../Assets/popcorn.png" Height="100" Width="220" Margin="-500,-100,60,10"/>
-        <Image Source="../Assets/cineworld.png" Height="220" Width="220" Margin="-5,-165,10,10"/>
-        <Image Source="../Assets/paramount.png" Height="250" Width="250" Margin="510,-245,0,10"/>
-        <Image Source="../Assets/kingsland.png" Height="250" Width="250" Margin="1010,-260,0,10"/>
+            </ListView>
         </StackPanel>
 
 

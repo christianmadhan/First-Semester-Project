@@ -113,6 +113,9 @@
     <Compile Include="View\Browse.xaml.cs">
       <DependentUpon>Browse.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginAdminPage.xaml.cs">
       <DependentUpon>LoginAdminPage.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,7 @@
     <Content Include="Assets\Godfatherr.jpg" />
     <Content Include="Assets\inceptionn.jpg" />
     <Content Include="Assets\insideOut.jpg" />
+    <Content Include="Assets\interior.jpg" />
     <Content Include="Assets\intersteller.jpg" />
     <Content Include="Assets\jumani.jpg" />
     <Content Include="Assets\JusticeLeague.jpg" />
@@ -178,6 +182,11 @@
     <Content Include="Assets\thor1.jpg" />
     <Content Include="Assets\UmbrellaAssets\Christmasdec1.jpg" />
     <Content Include="Assets\UmbrellaAssets\logoTransparent.png" />
+    <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-100.png" />
+    <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-125.png" />
+    <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-150.png" />
+    <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-200.png" />
+    <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-400.png" />
     <Content Include="Assets\UmbrellaAssets\logowhite.png" />
     <Content Include="Assets\UmbrellaAssets\splash.png" />
     <Content Include="Assets\UmbrellaAssets\splashBG.png" />
@@ -212,6 +221,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Browse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -33,6 +33,7 @@ namespace MovieApp.View
             if (userNameBox.Text == "root" && PasswordBox.Password == "123")
             {
                 Frame.Navigate(typeof(AdminPage));
+                (App.Current as App).adminSession = true;
             }
             else
             {
@@ -41,10 +42,5 @@ namespace MovieApp.View
             }
         }
         
-
-        private void BackToMainPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Browse));
-        }
     }
 }

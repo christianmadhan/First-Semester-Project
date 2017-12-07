@@ -15,34 +15,16 @@
         </Grid.DataContext>
         
         <!--Columns and Rows-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="300"/>
-            <RowDefinition Height="30*"/>
-        </Grid.RowDefinitions>
-
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
 
         </Grid.ColumnDefinitions>
 
 
-        <!--Menu bar-->
-        <Border BorderThickness="0,0,0,11" Grid.ColumnSpan="3" BorderBrush="#773438" Margin="0,0,0,1.2">
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#353535">
-                <StackPanel Orientation="Horizontal">
-                    <Button Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoHome"/>
-                    <Button Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" />
-                    <Button Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="GoToAbout"/>
-                    <Button Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535"  Click="GoToAdminPage"   />
-                </StackPanel>
-            </StackPanel>
-        </Border>
-        
         <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Orientation="Horizontal">
             <ListView  
-                      ItemsSource="{Binding Movies }"
+                      ItemsSource="{Binding Movies}"
                       Background="#d8d8d8">
                 <ListView.ItemTemplate>
                     <DataTemplate  >
@@ -68,28 +50,19 @@
                 <Border BorderBrush="#773438" BorderThickness="0,0,0,10">
                     <TextBlock Text="Search" TextAlignment="Center" Margin="0,10,0,0"/>
                 </Border>
-               <StackPanel Orientation="Horizontal">
-                   <TextBlock Text="Genres:" Margin="0,10,0,0"/>
-                   <ComboBox Name="SearchGenres">
-                       <ComboBoxItem Content="Action"/>
-                       <ComboBoxItem Content="Comedy"/>
-                       <ComboBoxItem Content="Documentary"/>
-                       <ComboBoxItem Content="ScienceFiction"/>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBlock Text="Genres:" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <ComboBox Name="SearchGenres" Margin="40,0,0,0" Width="100">
+                        <ComboBoxItem Content="Action"/>
+                        <ComboBoxItem Content="Comedy"/>
+                        <ComboBoxItem Content="Documentary"/>
+                        <ComboBoxItem Content="ScienceFiction"/>
                         <ComboBoxItem Content="Animation"/>
                     </ComboBox>
-               </StackPanel>
-                <Button HorizontalAlignment="Center" Width="40" Height="30" Margin="0,10,0,0" Content="Filter" />
+                </StackPanel>
+                <Button HorizontalAlignment="Center" Width="60" Height="30" Margin="0,10,0,0" Content="Filter" />
             </StackPanel>
-            
-            
-
         </StackPanel>
-
-
-
-       
-
-
     </Grid>
 </Page>
 

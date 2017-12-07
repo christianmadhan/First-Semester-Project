@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MovieApp.Annotations;
 using MovieApp.View;
 
 namespace MovieApp
@@ -41,6 +42,7 @@ namespace MovieApp
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
+
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -74,6 +76,7 @@ namespace MovieApp
             }
         }
 
+        public bool adminSession = false;
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>

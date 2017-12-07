@@ -7,25 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="../Assets/adminLogin.jpeg"/>
-        </Grid.Background>
+    <Grid Background="#353535">
+        
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="500" />
+            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="400"/>
+            <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <StackPanel Margin="40,150,10,0">
+        <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Source="../Assets/UmbrellaAssets/logoTransparent.png"></Image>
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Center" Padding="0,100,0,0">
+            <StackPanel  HorizontalAlignment="Center">
                 <TextBlock Text="Username" TextAlignment="Center" Foreground="White"/>
                 <TextBox  HorizontalAlignment="Center" Width="300" Margin="0,5,0,0" Name="userNameBox"/>
 
@@ -33,9 +31,7 @@
                 <PasswordBox HorizontalAlignment="Center" Width="300" Margin="0,5,0,0" Name="PasswordBox"/>
             
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Height="40" Width="100" Margin="0,10,0,0" Content="Login" Foreground="White" Background="#773438" Click="LoginToAdminPage"
-                            />
-                    <Button Height="40" Width="100"  Margin="10,10,0,0" Content="Back" Foreground="White" Background="#773438" Click="BackToMainPage"/>
+                    <Button Height="40" Width="100" Margin="0,10,0,0" Content="Login" Foreground="White" Background="#773438" Click="LoginToAdminPage"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
