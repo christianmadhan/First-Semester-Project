@@ -29,7 +29,7 @@
             </StackPanel>
         </Border>
 
-
+      
         
 
 
@@ -37,7 +37,7 @@
 
         <!--promo code text -->
         <StackPanel Grid.Row="3" Background="#773438" Height="200">
-            
+        <Image Source="../Assets/Dolby-digital-logo.png" Height="110" Width="200" Margin="-50,10,1000,10"/>
         </StackPanel>
 
 
