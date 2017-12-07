@@ -18,10 +18,11 @@ namespace MovieApp.Model
         private string _actors;
         private string _censorship;
         private string _description;
+        private int _price;
         
 
         // Constructer.
-        public Movie(string imageUrl,string title, string director, string lenght, string genre, string actors, string censorship, string description)
+        public Movie(string imageUrl,string title, string director, string lenght, string genre, string actors, string censorship, string description, int price)
         {
             _imageUrl = imageUrl;
             _title = title;
@@ -31,6 +32,7 @@ namespace MovieApp.Model
             _censorship = censorship;
             _description = description;
             _genre = genre;
+            _price = price;
         }
 
         // Needed to add an empty contructer for the relay Command.
@@ -79,6 +81,12 @@ namespace MovieApp.Model
         {
             get { return _genre; }
             set { _genre = value; OnPropertyChanged(Genre); }
+        }
+
+        public int Price
+        {
+            get { return _price; }
+            set { _price = value; }
         }
 
 

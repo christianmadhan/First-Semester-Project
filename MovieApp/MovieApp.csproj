@@ -92,6 +92,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Model\FrameNavigate.cs" />
+    <Compile Include="Model\SingleTonFoodList.cs" />
+    <Compile Include="View Model\FoodList.cs" />
     <Compile Include="View\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,12 @@
     </Compile>
     <Compile Include="View\Browse.xaml.cs">
       <DependentUpon>Browse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BuyFood.xaml.cs">
+      <DependentUpon>BuyFood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FoodPage.xaml.cs">
+      <DependentUpon>FoodPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -150,6 +159,7 @@
     <Content Include="Assets\dragon2.jpg" />
     <Content Include="Assets\Dunkirkk.jpg" />
     <Content Include="Assets\fightclub.jpg" />
+    <Content Include="Assets\food.png" />
     <Content Include="Assets\forrestGump.jpg" />
     <Content Include="Assets\galaxy.jpg" />
     <Content Include="Assets\Godfatherr.jpg" />
@@ -221,6 +231,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Browse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BuyFood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FoodPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

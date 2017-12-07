@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="MovieApp.View.FoodPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MovieApp.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:MovieApp.View_Model"
+    mc:Ignorable="d">
+
+    <Grid Background="#d8d8d8">
+        <Grid.DataContext>
+            <viewModel:FoodList/>
+        </Grid.DataContext>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+            
+        </Grid.ColumnDefinitions>
+
+        <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Background="#353535">
+                <StackPanel Orientation="Horizontal">
+                    <Button  Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
+                    <Button  Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
+                    <Button  Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535"  />
+                    <Button  Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Background="#353535">
+            <StackPanel>
+                <TextBlock TextAlignment="Center" Text="You Picked:"/>
+                <Image Source="{Binding ImageUrl}" Height="50" Width="70"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="{Binding Title}"/>
+                <TextBlock Text="{Binding Director}"/>
+                <TextBlock Text="{Binding Lenght}"/>
+                <TextBlock Text="{Binding Genre}"/>
+                <TextBlock Text="{Binding Actors}"/>
+                <TextBlock Text="{Binding Censorship}"/>
+                <TextBlock Text="{Binding Description}"/>
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+          
+            <ListView  
+                ItemsSource="{Binding Foods}"
+                Background="#d8d8d8">
+                <ListView.ItemTemplate>
+                    <DataTemplate  >
+                        <StackPanel >
+                            <StackPanel Orientation="Horizontal" Margin="0,0,10,10">
+                                <Image Source="{Binding ImageUrl}" Width="200"/>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Name}"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Genre: "/>
+                                        <TextBlock Text="{Binding Size}"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Price: "/>
+                                        <TextBlock Text="{Binding Price}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid  Orientation="Horizontal" MaximumRowsOrColumns="3"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+        </StackPanel>
+
+    </Grid>
+
+</Page>

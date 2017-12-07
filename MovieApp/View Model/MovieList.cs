@@ -7,14 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using MovieApp.Model;
-
+using MovieApp.View;
 namespace MovieApp.View_Model
 {
   public  class MovieList : NotifyChanged
     {
         private Movie _selectedMovie;
 
-           private SingletonMovieList _singleton = SingletonMovieList.GetInstance();
+        private readonly FrameNavigate _frameNavigate;
+
+        private readonly Singleton _userSingleton;
+
+        private SingletonMovieList _singleton = SingletonMovieList.GetInstance();
         
         // The collection of all the movies, the list that is displayed in the view.
         public ObservableCollection<Movie> Movies { get; set; }
@@ -24,6 +28,8 @@ namespace MovieApp.View_Model
 
         // Only accessible for the admin
         public RelayCommand DeleteMovie { get; set; }
+
+        public RelayCommand GoToBuyFoodPageCommand { get; set; }
 
         // Only accessible for the admin
         public Movie AddNewMovie { get; set; }
@@ -60,10 +66,15 @@ namespace MovieApp.View_Model
 
             AddMovie = new RelayCommand(DoAddMovie);
             DeleteMovie = new RelayCommand(DoDeleteMovie);
-           
+            GoToBuyFoodPageCommand = new RelayCommand(DoPageBuyFood);
+
             AddNewMovie = new Movie();
 
             SelectedMovie = new Movie();
+
+            _frameNavigate = new FrameNavigate();
+
+            _userSingleton = Singleton.GetInstance();
 
         }
 
@@ -77,10 +88,13 @@ namespace MovieApp.View_Model
             _singleton.GetMovieList().Remove(SelectedMovie);
         }
 
-        public void DoFindMovies()
+        public void DoPageBuyFood()
         {
-           
+            _userSingleton.SetMovie(_selectedMovie);
+            Type type = typeof(FoodPage);
+            _frameNavigate.ActivateFrameNavigation(type);
         }
+
 
     }
 }

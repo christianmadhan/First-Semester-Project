@@ -8,13 +8,15 @@ namespace MovieApp.Model
 {
     class Food : NotifyChanged
     {
-        
+
+        private string _imageUrl;
         private string _name;
         private string _size;
         private int _price;
 
-        public Food(string name, string size, int price)
+        public Food(string imageUrl,string name, string size, int price)
         {
+            _imageUrl = imageUrl;
             _name = name;
             _size = size;
             _price = price;
@@ -24,6 +26,11 @@ namespace MovieApp.Model
         // Get and set
         //--------------------------------
 
+        public string ImageUrl
+        {
+            get { return _imageUrl; }
+            set { _imageUrl = value; }
+        }
         public string Name
         {
             get { return _name; }
