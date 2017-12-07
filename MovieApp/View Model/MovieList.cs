@@ -88,11 +88,20 @@ namespace MovieApp.View_Model
             _singleton.GetMovieList().Remove(SelectedMovie);
         }
 
-        public void DoPageBuyFood()
+        public async void DoPageBuyFood()
         {
-            _userSingleton.SetMovie(_selectedMovie);
-            Type type = typeof(FoodPage);
-            _frameNavigate.ActivateFrameNavigation(type);
+            // You cannot continue if you havent picked a movie
+            if (_selectedMovie.Price == 0)
+            {
+                var dialog = new MessageDialog("You have to pick a movie");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                _userSingleton.SetMovie(_selectedMovie);
+                Type type = typeof(FoodPage);
+                _frameNavigate.ActivateFrameNavigation(type);
+            }
         }
 
 
