@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieApp.Model
 {
-     class Movie : NotifyChanged
+  public   class Movie : NotifyChanged
     {
         
         // Description about the movie

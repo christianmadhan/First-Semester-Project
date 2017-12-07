@@ -9,7 +9,7 @@ using MovieApp.Annotations;
 
 namespace MovieApp.Model
 {
-    class NotifyChanged : INotifyPropertyChanged
+   public class NotifyChanged : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

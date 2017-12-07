@@ -42,7 +42,7 @@
         
         <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Orientation="Horizontal">
             <ListView  
-                      ItemsSource="{Binding Movies}"
+                      ItemsSource="{Binding Movies }"
                       Background="#d8d8d8">
                 <ListView.ItemTemplate>
                     <DataTemplate  >

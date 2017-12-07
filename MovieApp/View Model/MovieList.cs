@@ -8,9 +8,12 @@ using MovieApp.Model;
 
 namespace MovieApp.View_Model
 {
-    class MovieList : NotifyChanged
+  public  class MovieList : NotifyChanged
     {
         private Movie _selectedMovie;
+
+           private SingletonMovieList _singleton = SingletonMovieList.GetInstance();
+        
         // The collection of all the movies, the list that is displayed in the view.
         public ObservableCollection<Movie> Movies { get; set; }
 
@@ -37,27 +40,21 @@ namespace MovieApp.View_Model
         // Create some movies to be in the list at the beginning of the program.
         public MovieList()
         {
-            Movies = new ObservableCollection<Movie>()
+            try
             {
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\n Best movie ever"),
-                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-            
-            };
+
+                Movies = new ObservableCollection<Movie>();
+
+                 var movieList = _singleton.GetMovieList();
+
+                Movies = movieList;
+
+            }
+            catch (Exception e)
+            {
+              
+            }
+ 
 
             AddMovie = new RelayCommand(DoAddMovie);
             DeleteMovie = new RelayCommand(DoDeleteMovie);
@@ -70,16 +67,13 @@ namespace MovieApp.View_Model
 
         public void DoAddMovie()
         {
-            Movies.Add(AddNewMovie);
+           _singleton.GetMovieList().Add(AddNewMovie);
         }
 
         public void DoDeleteMovie()
         {
-            Movies.Remove(SelectedMovie);
+            _singleton.GetMovieList().Remove(SelectedMovie);
         }
-
-       
-
 
     }
 }
