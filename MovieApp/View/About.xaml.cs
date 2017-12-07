@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MovieApp.View;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +26,25 @@ namespace MovieApp
         public About()
         {
             this.InitializeComponent();
+        }
+
+        private void GoToHome(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+        private void GoToBrowse(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Browse));
+        }
+
+        private void GoToAdminPage(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginAdminPage));
+        }
+
+        private void GoToAbout(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(About));
         }
     }
 }
