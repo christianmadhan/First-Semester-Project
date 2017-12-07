@@ -66,5 +66,10 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Frame.Navigate(typeof(LoginAdminPage));
         }
+
+        private void GoToAbout(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(About));
+        }
     }
 }
