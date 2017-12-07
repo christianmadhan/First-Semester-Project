@@ -48,7 +48,9 @@
                 <TextBlock Text="{Binding Actors}"/>
                 <TextBlock Text="{Binding Censorship}"/>
                 <TextBlock Text="{Binding Description}"/>
+                <TextBlock Text="{Binding Price}"/>
             </StackPanel>
+            <Button Content="Check out" HorizontalAlignment="Center"/>
         </StackPanel>
 
 
@@ -60,7 +62,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate  >
                         <StackPanel >
-                            <StackPanel Orientation="Horizontal" Margin="0,0,10,10">
+                            <StackPanel Orientation="Horizontal" Width="400" Margin="0,0,10,10">
                                 <Image Source="{Binding ImageUrl}" Width="200"/>
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal">
@@ -68,7 +70,6 @@
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Genre: "/>
                                         <TextBlock Text="{Binding Size}"/>
                                     </StackPanel>
 
@@ -83,7 +84,7 @@
                 </ListView.ItemTemplate>
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <ItemsWrapGrid  Orientation="Horizontal" MaximumRowsOrColumns="3"/>
+                        <ItemsWrapGrid  Orientation="Horizontal" MaximumRowsOrColumns="2"/>
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
             </ListView>

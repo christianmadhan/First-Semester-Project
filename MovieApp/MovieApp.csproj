@@ -116,8 +116,8 @@
     <Compile Include="View\Browse.xaml.cs">
       <DependentUpon>Browse.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\BuyFood.xaml.cs">
-      <DependentUpon>BuyFood.xaml</DependentUpon>
+    <Compile Include="View\CheckOutPage.xaml.cs">
+      <DependentUpon>CheckOutPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FoodPage.xaml.cs">
       <DependentUpon>FoodPage.xaml</DependentUpon>
@@ -234,7 +234,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\BuyFood.xaml">
+    <Page Include="View\CheckOutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

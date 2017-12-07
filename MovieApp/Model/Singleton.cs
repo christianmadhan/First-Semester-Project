@@ -73,5 +73,10 @@ namespace MovieApp.Model
         {
             return _movie.Genre;
         }
+
+        public int GetPrice()
+        {
+            return _movie.Price;
+        }
     }
 }

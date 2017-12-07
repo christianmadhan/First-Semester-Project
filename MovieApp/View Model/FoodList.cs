@@ -62,6 +62,8 @@ namespace MovieApp.View_Model
 
         public string Description { get; set; }
 
+        public int Price { get; set; }
+
         public FoodList()
         {
             _singleton = Singleton.GetInstance();
@@ -74,6 +76,7 @@ namespace MovieApp.View_Model
             Actors = _singleton.GetActors();
             Censorship = _singleton.GetCensorship();
             Description = _singleton.GetDescription();
+            Price = _singleton.GetPrice();
 
             try
             {
