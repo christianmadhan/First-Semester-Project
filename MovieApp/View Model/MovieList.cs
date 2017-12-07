@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using MovieApp.Model;
 
 namespace MovieApp.View_Model
@@ -37,7 +39,7 @@ namespace MovieApp.View_Model
         }
 
 
-        // Create some movies to be in the list at the beginning of the program.
+        // Returns the global list to the view.
         public MovieList()
         {
             try
@@ -45,16 +47,16 @@ namespace MovieApp.View_Model
 
                 Movies = new ObservableCollection<Movie>();
 
-                 var movieList = _singleton.GetMovieList();
+                var movieList = _singleton.GetMovieList();
 
                 Movies = movieList;
 
             }
             catch (Exception e)
             {
-              
+                var dialog = new MessageDialog(e.Message);
             }
- 
+
 
             AddMovie = new RelayCommand(DoAddMovie);
             DeleteMovie = new RelayCommand(DoDeleteMovie);
