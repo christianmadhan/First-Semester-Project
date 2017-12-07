@@ -60,7 +60,7 @@ namespace MovieApp.View_Model
 
             AddMovie = new RelayCommand(DoAddMovie);
             DeleteMovie = new RelayCommand(DoDeleteMovie);
-
+           
             AddNewMovie = new Movie();
 
             SelectedMovie = new Movie();
@@ -75,6 +75,11 @@ namespace MovieApp.View_Model
         public void DoDeleteMovie()
         {
             _singleton.GetMovieList().Remove(SelectedMovie);
+        }
+
+        public void DoFindMovies()
+        {
+           
         }
 
     }
