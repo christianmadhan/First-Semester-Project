@@ -8,6 +8,8 @@
     xmlns:viewModel="using:MovieApp.View_Model"
     mc:Ignorable="d">
 
+    
+
 
 
     <Grid Background="#d8d8d8">
