@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MovieApp.Model;
+using MovieApp.View_Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,6 +24,10 @@ namespace MovieApp.View
     /// </summary>
     public sealed partial class Browse : Page
     {
+        public RelayCommand FindMovies { get; set; }
+
+        private SingletonMovieList _singleton = SingletonMovieList.GetInstance();
+
         public Browse()
         {
             this.InitializeComponent();
