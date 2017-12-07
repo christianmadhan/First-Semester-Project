@@ -103,7 +103,9 @@
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\NotifyChanged.cs" />
     <Compile Include="Model\Singleton.cs" />
+    <Compile Include="Model\SingletonMovieList.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="View Model\CatalogMovieList.cs" />
     <Compile Include="View Model\MovieList.cs" />
     <Compile Include="View Model\RelayCommand.cs" />
     <Compile Include="View\AdminPage.xaml.cs">

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MovieApp.Model
 {
-    class Singleton
+  public  class Singleton
     {
         public static Movie _movie;
 
@@ -15,6 +16,7 @@ namespace MovieApp.Model
         private Singleton()
         {
             _movie = new Movie();
+        
         }
 
         public static Singleton GetInstance()
@@ -30,6 +32,7 @@ namespace MovieApp.Model
         {
             _movie = movie;
         }
+
 
         public string GetImageUrl()
         {
