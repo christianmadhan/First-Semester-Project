@@ -37,7 +37,11 @@
 
         <!--promo code text -->
         <StackPanel Grid.Row="3" Background="#773438" Height="200">
-        <Image Source="../Assets/Dolby-digital-logo.png" Height="110" Width="200" Margin="-50,10,1000,10"/>
+        <Image Source="../Assets/Dolby-digital-logo.png" Height="80" Width="200" Margin="-50,50,1000,10"/>
+        <Image Source="../Assets/popcorn.png" Height="100" Width="220" Margin="-500,-100,60,10"/>
+        <Image Source="../Assets/cineworld.png" Height="220" Width="220" Margin="-5,-165,10,10"/>
+        <Image Source="../Assets/paramount.png" Height="250" Width="250" Margin="510,-245,0,10"/>
+        <Image Source="../Assets/kingsland.png" Height="250" Width="250" Margin="1010,-260,0,10"/>
         </StackPanel>
 
 

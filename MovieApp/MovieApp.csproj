@@ -138,6 +138,7 @@
     <Content Include="Assets\avenger.jpg" />
     <Content Include="Assets\babies.jpg" />
     <Content Include="Assets\batman.jpg" />
+    <Content Include="Assets\cineworld.png" />
     <Content Include="Assets\daddyHome.jpg" />
     <Content Include="Assets\darkknight.jpg" />
     <Content Include="Assets\Dolby-digital-logo.png" />
@@ -148,7 +149,10 @@
     <Content Include="Assets\inceptionn.jpg" />
     <Content Include="Assets\jumani.jpg" />
     <Content Include="Assets\JusticeLeague.jpg" />
+    <Content Include="Assets\kingsland.png" />
     <Content Include="Assets\logoTransparent.png" />
+    <Content Include="Assets\paramount.png" />
+    <Content Include="Assets\popcorn.png" />
     <Content Include="Assets\shark.jpg" />
     <Content Include="Assets\Starwars.jpg" />
     <Content Include="Assets\strange.jpg" />
