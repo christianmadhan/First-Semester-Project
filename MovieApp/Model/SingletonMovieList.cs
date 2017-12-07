@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieApp.Model
 {
-    class SingletonMovieList
+   public class SingletonMovieList
     {
         public static ObservableCollection<Movie> ListMovie;
 
@@ -17,24 +17,42 @@ namespace MovieApp.Model
         {
             ListMovie = new ObservableCollection<Movie>()
             {
-                 new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\n Best movie ever"),
-                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/daddyHome.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
-                new Movie("../Assets/avenger.jpg","Avengers","Martin","1:50:0","Action","Jennifor Anniston", "18+","\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\n Best movie ever"),
+                new Movie("../Assets/daddyHome.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston",
+                    "18+", "\nBest movie ever"),
+                new Movie("../Assets/daddyHome.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston",
+                    "18+", "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
+                new Movie("../Assets/avenger.jpg", "Avengers", "Martin", "1:50:0", "Action", "Jennifor Anniston", "18+",
+                    "\nBest movie ever"),
 
+            };
         }
 
         public static SingletonMovieList GetInstance()
