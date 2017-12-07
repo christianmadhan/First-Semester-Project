@@ -100,6 +100,7 @@ namespace MovieApp.Model
                    "Genre: " + Genre + "\n" +
                    "Main Actor: " + Actors + "\n" +
                    "Censorship:  " + Censorship + "\n" +
+                   "Price" + Price + "\n" +
                    "Description:  " + Description;
         }
     }
