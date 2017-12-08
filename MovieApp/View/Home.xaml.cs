@@ -31,7 +31,7 @@ namespace MovieApp.View
             int change = 1;
 
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(2);
+            timer.Interval = TimeSpan.FromSeconds(4);
             timer.Tick += (o, a) =>
             {
                 // If we'd go out of bounds then reverse

@@ -80,7 +80,7 @@
             </StackPanel>
             <StackPanel Margin="0,20,0,0">
                 <TextBlock Text="Select Movie" TextAlignment="Center"/>
-                <Button Content="Let me watch daddy" HorizontalAlignment="Center" Command="{Binding GoToBuyFoodPageCommand}"/>
+                <Button Content="Let me watch!" HorizontalAlignment="Center" Command="{Binding GoToBuyFoodPageCommand}" Name="continueButton" Click="ContinueButton_OnClick"/>
             </StackPanel>
         </StackPanel>
     </Grid>

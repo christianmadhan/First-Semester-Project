@@ -24,16 +24,7 @@
             
         </Grid.ColumnDefinitions>
 
-        <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0" Grid.ColumnSpan="2">
-            <StackPanel Orientation="Horizontal" Background="#353535">
-                <StackPanel Orientation="Horizontal">
-                    <Button  Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
-                    <Button  Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
-                    <Button  Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535"  />
-                    <Button  Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535" />
-                </StackPanel>
-            </StackPanel>
-        </Border>
+        
 
         <StackPanel Grid.Column="0" Grid.Row="1" Background="#353535">
             <StackPanel>

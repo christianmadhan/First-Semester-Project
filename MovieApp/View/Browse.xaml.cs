@@ -33,19 +33,9 @@ namespace MovieApp.View
             this.InitializeComponent();
         }
 
-        private void GoHome(object sender, RoutedEventArgs e)
+        private void ContinueButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
-        }
-
-        private void GoToAdminPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(LoginAdminPage));
-        }
-
-        private void GoToAbout(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(About));
+            
         }
     }
 }
