@@ -22,6 +22,9 @@ namespace MovieApp.Model
             _price = price;
         }
 
+        // Empty Contructer. to make a singleton
+        public Food() { }
+
         //--------------------------------
         // Get and set
         //--------------------------------

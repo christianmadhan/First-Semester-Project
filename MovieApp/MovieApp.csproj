@@ -93,7 +93,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Model\FrameNavigate.cs" />
+    <Compile Include="Model\singletonFood.cs" />
     <Compile Include="Model\SingleTonFoodList.cs" />
+    <Compile Include="View Model\CheckOutList.cs" />
     <Compile Include="View Model\Filter.cs" />
     <Compile Include="View Model\FoodList.cs" />
     <Compile Include="View\About.xaml.cs">
@@ -102,7 +104,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Drink.cs" />
     <Compile Include="Model\Food.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\NotifyChanged.cs" />
