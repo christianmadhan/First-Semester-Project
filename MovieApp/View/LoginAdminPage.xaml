@@ -22,7 +22,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Source="../Assets/UmbrellaAssets/logoTransparent.png"></Image>
-        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Center" Padding="0,100,0,0">
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Center" Padding="0,0,0,70">
             <StackPanel  HorizontalAlignment="Center">
                 <TextBlock Text="Username" TextAlignment="Center" Foreground="White"/>
                 <TextBox  HorizontalAlignment="Center" Width="300" Margin="0,5,0,0" Name="userNameBox"/>

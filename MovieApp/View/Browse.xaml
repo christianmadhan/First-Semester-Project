@@ -68,7 +68,7 @@
                 </Border>
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                     <TextBlock Text="Genres:" Margin="0,0,0,0" VerticalAlignment="Center"/>
-                    <ComboBox Name="SearchGenres" Margin="40,0,0,0" Width="100">
+                    <ComboBox Name="SearchGenres" Margin="40,0,0,0" Width="100" SelectionChanged="SearchGenres_SelectionChanged">
                         <ComboBoxItem Content="Action"/>
                         <ComboBoxItem Content="Comedy"/>
                         <ComboBoxItem Content="Documentary"/>

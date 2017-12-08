@@ -20,12 +20,14 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            
         </Grid.ColumnDefinitions>
 
         <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Source="../Assets/UmbrellaAssets/logoTransparent.png"/>
@@ -53,10 +55,11 @@
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="../Assets/Dolby-digital-logo.png" Height="100" Width="150" Margin="150,0,0,0"/>
+                    <Image Source="../Assets/Dolby-digital-logo.png" Height="100" Width="150" Margin="40,0,0,0" />
                     <Image Source="../Assets/cineworld.png" Height="150" Width="200" Margin="100,0,0,0"/>
                     <Image Source="../Assets/paramount.png" Height="200" Width="200" Margin="100,0,0,0"/>
-                    <Image Source="../Assets/popcorn.png" Height="100" Width="100" Margin="100,0,0,0"/>
+                    <Image Source="../Assets/popcorn.png" Height="100" Width="100" Margin="140,0,0,0"/>
+                    <Image Source="../Assets/kingsland.png" Height="200" Width="220" Margin="180,0,0,0"/>
                 </StackPanel>
             </ListView>
         </StackPanel>
