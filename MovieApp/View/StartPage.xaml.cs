@@ -27,9 +27,16 @@ namespace MovieApp.View
             this.InitializeComponent();
         }
 
+
+
         private void StartButton_OnClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void TosBox_OnClick(object sender, RoutedEventArgs e)
+        {
+            startButton.IsEnabled = !startButton.IsEnabled;
         }
     }
 }
