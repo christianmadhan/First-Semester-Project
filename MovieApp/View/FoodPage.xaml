@@ -41,7 +41,7 @@
                 <TextBlock Text="{Binding Description}"/>
                 <TextBlock Text="{Binding Price}"/>
             </StackPanel>
-            <Button Content="Check out" HorizontalAlignment="Center"/>
+            <Button Content="Check out" HorizontalAlignment="Center" Command="{Binding GoToCheckOutCommand }"/>
         </StackPanel>
 
 
@@ -49,6 +49,7 @@
           
             <ListView  
                 ItemsSource="{Binding Foods}"
+                SelectedItem="{Binding SelectedFood, Mode=TwoWay}"
                 Background="#d8d8d8">
                 <ListView.ItemTemplate>
                     <DataTemplate  >

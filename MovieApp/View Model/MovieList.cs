@@ -12,7 +12,7 @@ namespace MovieApp.View_Model
 {
   public  class MovieList : NotifyChanged
     {
-        private Movie _selectedMovie;
+        public Movie _selectedMovie;
 
         private readonly FrameNavigate _frameNavigate;
 

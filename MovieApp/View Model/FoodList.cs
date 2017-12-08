@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using MovieApp.Model;
+using MovieApp.View;
 
 namespace MovieApp.View_Model
 {
@@ -17,8 +18,11 @@ namespace MovieApp.View_Model
         */
 
         private Food _selecetedFood;
+        
 
         private readonly FrameNavigate _frameNavigate;
+
+        private readonly singletonFood _userSingletonFood;
 
         private SingleTonFoodList _singleFood = SingleTonFoodList.GetInstance();
 
@@ -93,7 +97,34 @@ namespace MovieApp.View_Model
 
             }
 
+            AddFood = new RelayCommand(DoAddFood);
+            DeleteFood = new RelayCommand(DoDeleteFood);
+            GoToCheckOutCommand = new RelayCommand(DoGoToCheckout);
 
+            AddNewFood = new Food();
+
+            SelectedFood = new Food();
+
+            _frameNavigate = new FrameNavigate();
+
+            _userSingletonFood = singletonFood.GetInstance();
+        }
+
+        public void DoAddFood()
+        {
+            
+        }
+
+        public void DoDeleteFood()
+        {
+            
+        }
+
+        public void DoGoToCheckout()
+        {
+            _userSingletonFood.SetFood(_selecetedFood);
+            Type type = typeof(CheckOutPage);
+            _frameNavigate.ActivateFrameNavigation(type);
 
         }
         //-----------------------------------------------------------------
