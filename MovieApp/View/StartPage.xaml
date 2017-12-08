@@ -22,9 +22,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        
         <Image Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Source="../Assets/UmbrellaAssets/logoTransparent.png" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <CheckBox Name="tosBox" Click="TosBox_OnClick"/>
+            <TextBlock Margin="-90,0,0,0" VerticalAlignment="Center" Text="By clicking 'Take a seat' you agree to our "><Hyperlink NavigateUri="https://www.rubycinema.dk/tos.html">Terms and Conditions</Hyperlink></TextBlock>
+        </StackPanel>
         <Button Grid.Column="1" Grid.Row="3" Name="startButton" Content="Take a seat" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                FontFamily="Helvetica" FontSize="50" Click="StartButton_OnClick" Background="#33CD2D2D"/>
+                FontFamily="Helvetica" FontSize="50" Click="StartButton_OnClick" Background="#33CD2D2D" IsEnabled="False"/>
 
 
     </Grid>
