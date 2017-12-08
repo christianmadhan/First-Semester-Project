@@ -53,9 +53,10 @@ namespace MovieApp.View_Model
         public async void DownloadTicket()
         {
             FileSavePicker picker = new FileSavePicker();
-            picker.FileTypeChoices.Add("Ticket", new List<string>() { ".txt" });
+            picker.FileTypeChoices.Add("txt", new List<string>() { ".txt" });
             picker.SuggestedStartLocation = PickerLocationId.Desktop;
             picker.SuggestedFileName = "RuybyTicket";
+ 
             StorageFile file = await picker.PickSaveFileAsync();
             if (file != null)
             {
@@ -65,15 +66,16 @@ namespace MovieApp.View_Model
                 
                 if (_singletonFood.GetName() == "")
                 {
-                    information = _singleton.GetTitle() + "something";
+                    information = "Movie: " + _singleton.GetTitle() + "Price: " + _singleton.GetPrice();
                 }
                 else
                 {
-                    information ="Hello."+ "\n" + _singleton.GetTitle() + "\n" + "something";
+                    information = "Movie: " + _singleton.GetTitle() + "Price: " + _singleton.GetPrice() + "Food: " +
+                                  _singletonFood.GetName() + "Total price: " + totalPrice;
 
                 }
-
-                await FileIO.WriteTextAsync(file, information + FileMode.Append);
+               
+                await FileIO.WriteTextAsync(file, information);
             }
         }
 
