@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using MovieApp.Model;
 
 namespace MovieApp.View_Model
@@ -15,7 +16,7 @@ namespace MovieApp.View_Model
          Change it or dont, it works!
         */
 
-        private Food _seleceteFood;
+        private Food _selecetedFood;
 
         private readonly FrameNavigate _frameNavigate;
 
@@ -31,19 +32,19 @@ namespace MovieApp.View_Model
 
         public Food AddNewFood { get; set; }
 
-        // Will be implemented.
-        //public Food SelectedFood
-        //{
-        //    get => _seleceteFood;
-        //    set
-        //    {
-        //        _seleceteFood = value;
-        //        OnPropertyChanged(SelectedFood);
-        //    }
-        //}
+       
+        public Food SelectedFood
+        {
+            get => _selecetedFood;
+            set
+            {
+                _selecetedFood = value;
+                OnPropertyChanged(nameof(SelectedFood));
+            }
+        }
 
-    //-----------------------------------------------------------------
-    // Retrive Selected Movie Item and display,
+        //-----------------------------------------------------------------
+        // Retrive Selected Movie Item and display,
         private Singleton _singleton;
 
         public string ImageUrl { get; set; }
@@ -88,9 +89,11 @@ namespace MovieApp.View_Model
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                var dialig = new MessageDialog(e.Message);
+
             }
+
+
 
         }
         //-----------------------------------------------------------------
