@@ -1,32 +1,80 @@
-﻿using MovieApp.Model;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using MovieApp.Model;
 
 namespace MovieApp.View_Model
 {
     class CheckOutList
     {
         //Selected Food
+        private singletonFood _singletonFood;
+        
+        public string NameFood { get; set; }
 
+        public string SizeFood { get; set; }
+
+        public int PriceFood { get; set; }
 
 
         // Selected Movie
         private Singleton _singleton;
 
-        public string ImageUrl { get; set; }
+        public string ImageUrlMovie { get; set; }
 
-        public string Title { get; set; }
+        public string TitleMovie { get; set; }
 
-        public int Price { get; set; }
+        public int PriceMovie { get; set; }
+
+        // Download The Text as pdf
+
+         public RelayCommand GetTicket { get; set; }
 
         public CheckOutList()
         {
             _singleton = Singleton.GetInstance();
-
-            ImageUrl = _singleton.GetImageUrl();
-            Title = _singleton.GetTitle();
-            Price = _singleton.GetPrice();
+            _singletonFood = singletonFood.GetInstance();
 
 
+            NameFood = _singletonFood.GetName();
+            SizeFood = _singletonFood.GetSize();
+            PriceFood = _singletonFood.GetPrice();
 
+            ImageUrlMovie = _singleton.GetImageUrl();
+            TitleMovie = _singleton.GetTitle();
+            PriceMovie = _singleton.GetPrice();
+
+            GetTicket = new RelayCommand(DownloadTicket);
+        }
+
+        public async void DownloadTicket()
+        {
+            FileSavePicker picker = new FileSavePicker();
+            picker.FileTypeChoices.Add("Ticket", new List<string>() { ".txt" });
+            picker.SuggestedStartLocation = PickerLocationId.Desktop;
+            picker.SuggestedFileName = "RuybyTicket";
+            StorageFile file = await picker.PickSaveFileAsync();
+            if (file != null)
+            {
+                int totalPrice = _singleton.GetPrice() + _singletonFood.GetPrice();
+                StringBuilder builder = new StringBuilder();
+                string information;
+                
+                if (_singletonFood.GetName() == "")
+                {
+                    information = _singleton.GetTitle() + "something";
+                }
+                else
+                {
+                    information ="Hello."+ "\n" + _singleton.GetTitle() + "\n" + "something";
+
+                }
+
+                await FileIO.WriteTextAsync(file, information + FileMode.Append);
+            }
         }
 
     }

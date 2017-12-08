@@ -5,10 +5,14 @@
     xmlns:local="using:MovieApp.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:MovieApp.View_Model"
     mc:Ignorable="d">
 
     <Grid Background="#d8d8d8">
 
+        <Grid.DataContext>
+            <viewModel:CheckOutList/>
+        </Grid.DataContext>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -24,7 +28,24 @@
         <StackPanel Grid.Column="1" Grid.Row="1" Background="#353535">
             <StackPanel>
                 <TextBlock Text="Check Out" Foreground="White" FontSize="20" TextAlignment="Center"/>
-                
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Movie: "/>
+                    <TextBlock Text="{Binding TitleMovie}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Price: "/>
+                    <TextBlock Text="{Binding PriceMovie}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Food: "/>
+                    <TextBlock Text="{Binding NameFood}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Price: "/>
+                    <TextBlock Text="{Binding PriceFood}"/>
+                </StackPanel>
+                <Button Content="Get Ticket" Command="{Binding GetTicket}"/>
+
             </StackPanel>
         </StackPanel>
 
