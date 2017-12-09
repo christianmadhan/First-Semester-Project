@@ -31,6 +31,7 @@ namespace MovieApp.View_Model
 
         public RelayCommand GoToBuyFoodPageCommand { get; set; }
 
+
         // Only accessible for the admin
         public Movie AddNewMovie { get; set; }
 
@@ -67,6 +68,7 @@ namespace MovieApp.View_Model
             AddMovie = new RelayCommand(DoAddMovie);
             DeleteMovie = new RelayCommand(DoDeleteMovie);
             GoToBuyFoodPageCommand = new RelayCommand(DoPageBuyFood);
+           
 
             AddNewMovie = new Movie();
 
@@ -87,6 +89,7 @@ namespace MovieApp.View_Model
         {
             _singleton.GetMovieList().Remove(SelectedMovie);
         }
+
 
         public async void DoPageBuyFood()
         {

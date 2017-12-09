@@ -25,7 +25,7 @@ namespace MovieApp.Model
             //SaveToJsonFile();
         }
 
-        private static void GetStaticMovieList()
+        public static void GetStaticMovieList()
         {
             ListMovie = new ObservableCollection<Movie>()
             {
@@ -36,7 +36,7 @@ namespace MovieApp.Model
                 new Movie("../Assets/intersteller.jpg", "Intersteller", "Martin Scorsese", "1:27:0", "Action",
                     "Jennifor Anniston",
                     "15+", "\nBest movie ever",89),
-                new Movie("../Assets/kingsman.jpg", "Kingsmen", "Christopher Nolan", "1:52:0", "Action", "Jennifor Anniston",
+                new Movie("../Assets/kingsman.jpg", "Kingsmen", "Christopher Nolan", "1:52:0", "Comedy", "Jennifor Anniston",
                     "15+",
                     "\nBest movie ever",89),
                 new Movie("../Assets/Logan.jpg", "Logan", "Ron Howard", "2:50:0", "Action", "Jennifor Anniston", "18+",
@@ -96,6 +96,12 @@ namespace MovieApp.Model
             return ListMovie;
 
         }
+
+       public void ResetMovieList()
+       {
+           GetStaticMovieList();
+            
+       }
 
         //public static void SaveToJsonFile()
         //{

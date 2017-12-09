@@ -33,6 +33,8 @@ namespace MovieApp.View_Model
 
          public RelayCommand GetTicket { get; set; }
 
+        public int TotalPrice { get; set; }
+
         public CheckOutList()
         {
             _singleton = Singleton.GetInstance();
@@ -46,6 +48,8 @@ namespace MovieApp.View_Model
             ImageUrlMovie = _singleton.GetImageUrl();
             TitleMovie = _singleton.GetTitle();
             PriceMovie = _singleton.GetPrice();
+
+            TotalPrice = PriceMovie + PriceFood;
 
             GetTicket = new RelayCommand(DownloadTicket);
         }
@@ -77,6 +81,8 @@ namespace MovieApp.View_Model
                
                 await FileIO.WriteTextAsync(file, information);
             }
+
+
         }
 
     }

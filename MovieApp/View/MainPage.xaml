@@ -26,6 +26,6 @@
                 </StackPanel>
             </StackPanel>
         </Border>
-        <Frame Name="mainFrame" Grid.Row="1"/>
+        <Frame Name="MainFrame" Grid.Row="1"/>
     </Grid>
 </Page>

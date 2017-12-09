@@ -6,6 +6,8 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -34,37 +36,38 @@ namespace MovieApp
             formattableTitleBar.ButtonBackgroundColor = Colors.Transparent;
             CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            mainFrame.Navigate(typeof(Home));
+            MainFrame.Navigate(typeof(Home));
         }
 
         private void HomeButton_OnClick(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(typeof(Home));
+            MainFrame.Navigate(typeof(Home));
         }
 
         private void BrowseButton_OnClick(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(typeof(Browse));
+            MainFrame.Navigate(typeof(Browse));
         }
 
         private void AboutButton_OnClick(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(typeof(About));
+            MainFrame.Navigate(typeof(About));
         }
 
         private void AdminButton_OnClick(object sender, RoutedEventArgs e)
         {
             if ((App.Current as App).adminSession)
             {
-                mainFrame.Navigate(typeof(AdminPage));
+                MainFrame.Navigate(typeof(AdminPage));
             }
             else
             {
-                mainFrame.Navigate(typeof(LoginAdminPage));
+                MainFrame.Navigate(typeof(LoginAdminPage));
             }
         }
     }

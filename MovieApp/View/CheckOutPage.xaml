@@ -25,7 +25,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" Background="#353535">
+        <Border Grid.Column="1" Grid.Row="1" BorderBrush="#353535" CornerRadius="10,10,10,10" BorderThickness="7,7,7,8" >
+            <StackPanel Background="#353535">
             <StackPanel>
                 <TextBlock Text="Check Out" Foreground="White" FontSize="20" TextAlignment="Center"/>
                 <StackPanel Orientation="Horizontal">
@@ -48,6 +49,7 @@
 
             </StackPanel>
         </StackPanel>
+        </Border>
 
     </Grid>
 </Page>
