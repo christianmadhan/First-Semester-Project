@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MovieApp.View_Model
 
         private readonly FrameNavigate _frameNavigate;
 
-        private readonly Singleton _userSingleton;
+        private readonly singletonMovie _userSingleton;
 
         private SingletonMovieList _singleton = SingletonMovieList.GetInstance();
         
@@ -62,6 +63,7 @@ namespace MovieApp.View_Model
             catch (Exception e)
             {
                 var dialog = new MessageDialog(e.Message);
+                
             }
 
 
@@ -76,7 +78,7 @@ namespace MovieApp.View_Model
 
             _frameNavigate = new FrameNavigate();
 
-            _userSingleton = Singleton.GetInstance();
+            _userSingleton = singletonMovie.GetInstance();
 
         }
 

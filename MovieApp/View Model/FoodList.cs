@@ -49,7 +49,7 @@ namespace MovieApp.View_Model
 
         //-----------------------------------------------------------------
         // Retrive Selected Movie Item and display,
-        private Singleton _singleton;
+        private singletonMovie _singleton;
 
         public string ImageUrl { get; set; }
 
@@ -69,9 +69,11 @@ namespace MovieApp.View_Model
 
         public int Price { get; set; }
 
+        public Uri Trailer { get; set; }
+
         public FoodList()
         {
-            _singleton = Singleton.GetInstance();
+            _singleton = singletonMovie.GetInstance();
 
             ImageUrl = _singleton.GetImageUrl();
             Title = _singleton.GetTitle();
@@ -82,6 +84,7 @@ namespace MovieApp.View_Model
             Censorship = _singleton.GetCensorship();
             Description = _singleton.GetDescription();
             Price = _singleton.GetPrice();
+            Trailer = _singleton.GetTrailer();
 
             try
             {

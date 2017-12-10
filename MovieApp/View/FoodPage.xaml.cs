@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -21,10 +22,13 @@ namespace MovieApp.View
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class FoodPage : Page
+
     {
+       
         public FoodPage()
         {
             this.InitializeComponent();
+ 
         }
 
 
@@ -34,4 +38,7 @@ namespace MovieApp.View
         }
 
     }
+
+
 }
+

@@ -21,7 +21,7 @@ namespace MovieApp.View_Model
 
 
         // Selected Movie
-        private Singleton _singleton;
+        private singletonMovie _singleton;
 
         public string ImageUrlMovie { get; set; }
 
@@ -37,7 +37,7 @@ namespace MovieApp.View_Model
 
         public CheckOutList()
         {
-            _singleton = Singleton.GetInstance();
+            _singleton = singletonMovie.GetInstance();
             _singletonFood = singletonFood.GetInstance();
 
 

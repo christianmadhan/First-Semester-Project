@@ -30,7 +30,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate  >
                         <StackPanel >
-                            <StackPanel Orientation="Horizontal" Margin="0,0,10,10">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,10,10" Height="250">
                                 <Image Source="{Binding _imageUrl}"/>
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal">

@@ -19,6 +19,7 @@ namespace MovieApp.Model
         private string _censorship;
         private string _description;
         private int _price;
+        private Uri _trailer;
         
 
         // Constructer.
@@ -33,6 +34,22 @@ namespace MovieApp.Model
             _description = description;
             _genre = genre;
             _price = price;
+        }
+
+        // Constructer if the movie has trailer.
+
+        public Movie(string imageUrl, string title, string director, string lenght, string genre, string actors, string censorship, string description, int price, Uri trailer)
+        {
+            _imageUrl = imageUrl;
+            _title = title;
+            _director = director;
+            _length = lenght;
+            _actors = actors;
+            _censorship = censorship;
+            _description = description;
+            _genre = genre;
+            _price = price;
+            _trailer = trailer;
         }
 
         // Needed to add an empty contructer for the relay Command.
@@ -87,6 +104,12 @@ namespace MovieApp.Model
         {
             get { return _price; }
             set { _price = value; }
+        }
+
+        public Uri Trailer
+        {
+            get { return _trailer; }
+            set { _trailer = value; }
         }
 
 

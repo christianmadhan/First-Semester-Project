@@ -27,6 +27,7 @@ namespace MovieApp.Model
 
         public static void GetStaticMovieList()
         {
+      
             ListMovie = new ObservableCollection<Movie>()
             {
                 new Movie("../Assets/strange.jpg", "Doctor Strange", "Ron Howard", "1:34:0", "Action", "Bennidict Boi", "15+",
@@ -73,6 +74,14 @@ namespace MovieApp.Model
                 new Movie("../Assets/paddignton2.jpg", "Paddington", "Martin Scorsese", "2:20:0", "Action", "Jennifor Anniston",
                     "PG",
                     "\nBest movie ever",89),
+                new Movie("../Assets/justiceLeague.jpg", "Justice League (2017)", "Zack Snyder", "2:00:0", "Fantasy", "Ben Affleck",
+                    "PG",
+                    "Decent",89, new Uri("ms-appx:///Assets/Trailers/JusticeLeagueTrailer.mov")),
+                new Movie("../Assets/MovieImage/jumanji.jpg", "Jumanji: Welcome to the Jungle", "Jake kasdan", "2:00:0", "Comedy", "Dwayne Johnson",
+                    "PG",
+                    "Decent",89, new Uri("ms-appx:///Assets/Trailers/jumanjiTrailer.mov"))
+
+
             };
         }
 

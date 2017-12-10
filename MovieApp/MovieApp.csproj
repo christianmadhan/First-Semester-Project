@@ -107,7 +107,7 @@
     <Compile Include="Model\Food.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\NotifyChanged.cs" />
-    <Compile Include="Model\Singleton.cs" />
+    <Compile Include="Model\singletonMovie.cs" />
     <Compile Include="Model\SingletonMovieList.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="View Model\MovieList.cs" />
@@ -176,6 +176,7 @@
     <Content Include="Assets\Logan.jpg" />
     <Content Include="Assets\logoTransparent.png" />
     <Content Include="Assets\missionImpossible.jpg" />
+    <Content Include="Assets\MovieImage\jumanji.jpg" />
     <Content Include="Assets\murderOnTheOrientExpress.jpg" />
     <Content Include="Assets\ninjago.jpg" />
     <Content Include="Assets\nutJob2.jpg" />
@@ -183,6 +184,7 @@
     <Content Include="Assets\paramount.png" />
     <Content Include="Assets\popcorn.png" />
     <Content Include="Assets\ribbon.png" />
+    <Content Include="Assets\RubyIcon.png" />
     <Content Include="Assets\sfi-hq.jpg" />
     <Content Include="Assets\shark.jpg" />
     <Content Include="Assets\Starwars.jpg" />
@@ -193,6 +195,8 @@
     <Content Include="Assets\thor.jpg" />
     <Content Include="Assets\adminLogin.jpeg" />
     <Content Include="Assets\thor1.jpg" />
+    <Content Include="Assets\Trailers\jumanjiTrailer.mov" />
+    <Content Include="Assets\Trailers\JusticeLeagueTrailer.mov" />
     <Content Include="Assets\UmbrellaAssets\Christmasdec1.jpg" />
     <Content Include="Assets\UmbrellaAssets\logoTransparent.png" />
     <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-100.png" />
