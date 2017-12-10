@@ -45,7 +45,11 @@
                     <TextBlock Text="Price: "/>
                     <TextBlock Text="{Binding PriceFood}"/>
                 </StackPanel>
-                <Button Content="Get Ticket" Command="{Binding GetTicket}"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Total Price: "/>
+                    <TextBlock Text="{Binding TotalPrice}"/>
+                </StackPanel>
+                    <Button Content="Get Ticket" Command="{Binding GetTicket}"/>
 
             </StackPanel>
         </StackPanel>

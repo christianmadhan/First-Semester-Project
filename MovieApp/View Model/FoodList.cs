@@ -71,6 +71,8 @@ namespace MovieApp.View_Model
 
         public Uri Trailer { get; set; }
 
+
+
         public FoodList()
         {
             _singleton = singletonMovie.GetInstance();
