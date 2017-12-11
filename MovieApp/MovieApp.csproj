@@ -147,12 +147,14 @@
     <Content Include="Assets\avatar.jpg" />
     <Content Include="Assets\avenger.jpg" />
     <Content Include="Assets\babies.jpg" />
+    <Content Include="Assets\Banner.png" />
     <Content Include="Assets\batman.jpg" />
     <Content Include="Assets\batman1.jpg" />
     <Content Include="Assets\bringHimHome.jpg" />
     <Content Include="Assets\cineworld.png" />
     <Content Include="Assets\daddyHome.jpg" />
     <Content Include="Assets\darkknight.jpg" />
+    <Content Include="Assets\Decoration.jpg" />
     <Content Include="Assets\Dolby-digital-logo.png" />
     <Content Include="Assets\dragon2.jpg" />
     <Content Include="Assets\Dunkirkk.jpg" />
