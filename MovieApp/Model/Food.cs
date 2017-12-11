@@ -13,17 +13,26 @@ namespace MovieApp.Model
         private string _name;
         private string _size;
         private int _price;
-        
+        private string _description;
         
 
-        public Food(string imageUrl,string name, string size, int price)
+        public Food(string imageUrl,string name, string size, int price )
         {
             _imageUrl = imageUrl;
             _name = name;
             _size = size;
             _price = price;
+            
         }
 
+        public Food(string imageUrl, string name, string size, int price, string description)
+        {
+            _imageUrl = imageUrl;
+            _name = name;
+            _size = size;
+            _price = price;
+            _description = description;
+        }
         // Empty Contructer. to make a singleton
         public Food() { }
 
@@ -53,6 +62,19 @@ namespace MovieApp.Model
             get { return _price; }
             set { _price = value;  }
         }
+
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; OnPropertyChanged(Description); }
+        }
+
+        public override string ToString()
+        {
+            return "Name: " + Name + "\n" + " Size: " + Size + "\n" + " Price: " + Price + "\n" + " Description: " +
+                   Description;
+        }
+
 
     }
 }

@@ -51,7 +51,10 @@ namespace MovieApp.Model
             return _food.Price;
         }
 
-
+        public string GetDescription()
+        {
+            return _food.Description;
+        }
 
 
     }

@@ -92,15 +92,15 @@
 
 
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
-            <ListView  
-                ItemsSource="{Binding Foods}"
+            <ListView  Width="690" 
+                ItemsSource="{Binding Foods}" 
                 SelectedItem="{Binding SelectedFood, Mode=TwoWay}"
                 Background="#d8d8d8" Height="655">
                 <ListView.ItemTemplate>
                     <DataTemplate  >
                         <StackPanel >
-                            <StackPanel Orientation="Horizontal" Width="400" Margin="0,0,10,10">
-                                <Image Source="{Binding ImageUrl}" Width="200"/>
+                            <StackPanel Orientation="Horizontal" Width="600"  Margin="0,0,10,10">
+                                <Image Source="{Binding ImageUrl}" Width="200"  /> 
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding Name}"  FontFamily="Helvetica"/>
@@ -113,6 +113,10 @@
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Price: "  FontFamily="Helvetica"/>
                                         <TextBlock Text="{Binding Price}"  FontFamily="Helvetica"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Description: "  FontFamily="Helvetica"/>
+                                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap" FontFamily="Helvetica"/>
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>

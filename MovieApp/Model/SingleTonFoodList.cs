@@ -22,9 +22,9 @@ namespace MovieApp.Model
         {
             ListFood = new ObservableCollection<Food>()
             {
-                new Food("../Assets/food.png","Menu 1", "Large", 100),
-                new Food("../Assets/food.png","Menu 2", "Medium", 50),
-                new Food("../Assets/food.png","Menu 3", "Small", 60),
+                new Food("../Assets/food.png","Menu 1", "Large" ,100,"Large popcorn,large pepsi and snickers"),
+                new Food("../Assets/food.png","Menu 2", "Medium" , 50,"Medium popcorn,medium pepsi+kit-kat"),
+                new Food("../Assets/food.png","Menu 3", "Small", 60,"Small popcorn and small pepsi"),
                 new Food("../Assets/food.png","Menu 4", "Large", 80),
                 new Food("../Assets/food.png","Menu 5", "XXLARGE REST IN PEACE", 90),
             };
@@ -48,5 +48,7 @@ namespace MovieApp.Model
         {
             return ListFood;
         }
+
+       
     }
 }

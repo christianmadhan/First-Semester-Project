@@ -30,9 +30,9 @@
         <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0" Grid.ColumnSpan="3">
             <StackPanel Orientation="Horizontal" Background="#353535">
                 <StackPanel Orientation="Horizontal">
-                    <Button Name="homeButton" Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
-                    <Button Name="browseButton" Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
-                    <Button Name="aboutButton" Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
+                    <Button Name="homeButton" Content="Home" Margin="10,19,10,0" Foreground="White" Background="#353535" VerticalAlignment="Top" Click="homeButton_Click"/>
+                    <Button Name="browseButton" Content="Browse" Margin="10,0,10,3.2" Foreground="White" Background="#353535" VerticalAlignment="Bottom" Click="browseButton_Click"/>
+                    <Button Name="aboutButton" Content="About" Margin="10,0,10,3.2" Foreground="White" Background="#353535" VerticalAlignment="Bottom" Click="aboutButton_Click"/>
                     <Button Name="adminButton" Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
                 </StackPanel>
             </StackPanel>
@@ -47,6 +47,8 @@
                 <TextBox Width="240" Text="{Binding AddNewFood.Name, Mode=TwoWay}"/>
                 <TextBlock Text="Size" TextAlignment="Center"  Foreground="#d8d8d8"/>
                 <TextBox Width="240" Text="{Binding AddNewFood.Size, Mode=TwoWay}"/>
+                <TextBlock Text="Description" TextAlignment="Center" Foreground="#d8d8d8"/>
+                <TextBox Width="240" TextWrapping="Wrap" Text="{Binding AddNewFood.Description, Mode=TwoWay}"/>
                 <TextBlock Text="Price" TextAlignment="Center" Foreground="#d8d8d8"/>
                 <TextBox Width="240" Text="{Binding AddNewFood.Price, Mode=TwoWay}" />
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -67,7 +69,7 @@
                         </Button.Background>
                     </Button>
                 </StackPanel>
-                
+
 
             </StackPanel>
         </StackPanel>
@@ -79,7 +81,7 @@
                         <StackPanel Orientation="Horizontal" Margin="0,0,10,10">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="{Binding ImageUrl}"/>
-                                <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                                <TextBlock Text="{Binding}" FontWeight="Bold" />
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
