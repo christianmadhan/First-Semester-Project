@@ -35,13 +35,11 @@ namespace MovieApp.View
         {
             this.InitializeComponent();
 
-            // DONT DELETE THE COMMETED CODE
+            foreach (var movie in _singleton.GetMovieList())
+            {
+                ResetList.Add(movie);
+            }
 
-            //foreach (var movie in _singleton.GetMovieList())
-            //{
-            //    ResetList.Add(movie);
-            //}
-            
         }
 
         private void ContinueButton_OnClick(object sender, RoutedEventArgs e)
@@ -61,36 +59,35 @@ namespace MovieApp.View
         private async void FilterMovies(object sender, RoutedEventArgs e)
         {
 
-            //try
-            //{
-            //    var myCollection = _singleton.GetMovieList();
-            //    var selectedGenre = FilterGenres.SelectionBoxItem.ToString();
-            //    foreach (var movie in myCollection.ToList())
-            //    {
-            //        if (movie.Genre != selectedGenre)
-            //        {
-            //            myCollection.Remove(movie);
-            //        }
-            //    }
-            //}
-            //catch (Exception exception)
-            //{
-            //    var dialig = new MessageDialog(exception.Message);
-            //    await dialig.ShowAsync();
-            //}
-       }
+            try
+            {
+                var myCollection = _singleton.GetMovieList();
+                var selectedGenre = FilterGenres.SelectionBoxItem.ToString();
+                foreach (var movie in myCollection.ToList())
+                {
+                    if (movie.Genre != selectedGenre)
+                    {
+                        myCollection.Remove(movie);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                var dialig = new MessageDialog(exception.Message);
+                await dialig.ShowAsync();
+            }
+        }
 
         
 
 
-        // It works
+   
         private void ResetBtn(object sender, RoutedEventArgs e)
         {
-
-            //foreach (var movie in ResetList)
-            //{
-            //    _singleton.GetMovieList().Add(movie);
-            //}
+            foreach (var movie in ResetList)
+            {
+                _singleton.GetMovieList().Add(movie);
+            }
         }
     }
     }
