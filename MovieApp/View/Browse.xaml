@@ -93,13 +93,15 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button HorizontalAlignment="Center" Width="60" Height="30" Margin="0,10,0,0" Content="Filter" Click="FilterMovies" />
                     <Button HorizontalAlignment="Center" Width="60" Height="30" Margin="10,10,0,0" Content="Reset" Click="ResetBtn" />
-
                 </StackPanel>
-                
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Sort the list from a to b"/>
+                <Button Content="Sort" HorizontalAlignment="Center" Click="SortTheList"/>
             </StackPanel>
             <StackPanel Margin="0,20,0,0">
                 <TextBlock Text="Select Movie" TextAlignment="Center"/>
-                <Button Content="Let me watch!" HorizontalAlignment="Center" Command="{Binding GoToBuyFoodPageCommand}" Name="continueButton" Click="ContinueButton_OnClick"/>
+                <Button Content="Let me watch!" HorizontalAlignment="Center" Command="{Binding GoToBuyFoodPageCommand}" />
             </StackPanel>
         </StackPanel>
     </Grid>

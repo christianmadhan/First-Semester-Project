@@ -31,15 +31,15 @@ namespace MovieApp.Model
             ListMovie = new ObservableCollection<Movie>()
             {
                 new Movie("../Assets/strange.jpg", "Doctor Strange", "Ron Howard", "1:34:0", "Action", "Bennidict Boi", "15+",
-                    "Best movie ever",89),
+                    "Best movie ever",100),
                 new Movie("../Assets/avatar.jpg", "Avatar", "Phil Lord", "1:23:0", "Action", "Jennifor Anniston",
-                    "15+", "Best movie ever",89),
+                    "15+", "Best movie ever",50),
                 new Movie("../Assets/intersteller.jpg", "Intersteller", "Martin Scorsese", "1:27:0", "Action",
                     "Jennifor Anniston",
                     "15+", "Best movie ever",89),
                 new Movie("../Assets/kingsman.jpg", "Kingsmen", "Christopher Nolan", "1:52:0", "Comedy", "Jennifor Anniston",
                     "15+",
-                    "Best movie ever",89),
+                    "Best movie ever",200),
                 new Movie("../Assets/Logan.jpg", "Logan", "Ron Howard", "2:50:0", "Action", "Jennifor Anniston", "18+",
                     "Best movie ever",89),
                 new Movie("../Assets/nutJob2.jpg", "Nut Job 2", "Lawernce Kasdan", "1:16:0", "Action", "Jennifor Anniston",
@@ -49,12 +49,12 @@ namespace MovieApp.Model
                     "Best movie ever",89),
                 new Movie("../Assets/insideOut.jpg", "Inside Out", "Martin Scorsese", "1:10:0", "Action", "Jennifor Anniston",
                     "PG",
-                    "Best movie ever",89),
+                    "Best movie ever",300),
                 new Movie("../Assets/galaxy.jpg", "Gaurdians Galaxy", "Ron Howard", "2:50:0", "Action", "Jennifor Anniston",
                     "18+",
-                    "Best movie ever",89),
+                    "Best movie ever",150),
                 new Movie("../Assets/batman1.jpg", "Batman", "Martin", "1:41:0", "Action", "Jennifor Anniston", "PG",
-                    "Best movie ever",89),
+                    "Best movie ever",20),
                 new Movie("../Assets/bringHimHome.jpg", "The Martian", "Chris Miller", "1:50:0", "Action", "Jennifor Anniston",
                     "18+",
                     "Best movie ever",89),
@@ -110,6 +110,11 @@ namespace MovieApp.Model
        {
            GetStaticMovieList();
             
+       }
+
+       public void SortList()
+       {
+           
        }
 
         //public static void SaveToJsonFile()

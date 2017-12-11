@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -28,9 +29,9 @@ namespace MovieApp.View
     {
         public RelayCommand FindMovies { get; set; }
 
-        private SingletonMovieList _singleton = SingletonMovieList.GetInstance();
+        private  SingletonMovieList _singleton = SingletonMovieList.GetInstance();
 
-        private ObservableCollection<Movie> ResetList= new ObservableCollection<Movie>();
+        private  ObservableCollection<Movie> ResetList= new ObservableCollection<Movie>();
         public Browse()
         {
             this.InitializeComponent();
@@ -46,8 +47,7 @@ namespace MovieApp.View
         private void SearchGenres_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             MessageDialog dialog = new MessageDialog
-            ("You have successfully booked the property"
-            );
+            ("You have successfully booked the property");
         }
 
 
@@ -80,15 +80,14 @@ namespace MovieApp.View
    
         private void ResetBtn(object sender, RoutedEventArgs e)
         {
+            var myCollection = _singleton.GetMovieList();
             foreach (var movie in ResetList)
             {
-                _singleton.GetMovieList().Add(movie);
+                if (movie.Genre != FilterGenres.SelectionBoxItem.ToString())
+                {
+                    _singleton.GetMovieList().Add(movie);
+                }
             }
-        }
-
-        private void ContinueButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         private void HomeButton_OnClick(object sender, RoutedEventArgs e)
@@ -118,6 +117,13 @@ namespace MovieApp.View
             }
         }
 
+
+        //TODO
+        private void SortTheList(object sender, RoutedEventArgs e)
+        {
+           
+
+        }
 
 
     }
