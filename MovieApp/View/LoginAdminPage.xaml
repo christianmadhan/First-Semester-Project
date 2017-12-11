@@ -17,12 +17,23 @@
         </Grid.ColumnDefinitions>
         
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Source="../Assets/UmbrellaAssets/logoTransparent.png"></Image>
-        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Center" Padding="0,0,0,70">
+        <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Horizontal" Background="#353535">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="homeButton" Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="HomeButton_OnClick"/>
+                    <Button Name="browseButton" Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="BrowseButton_OnClick"/>
+                    <Button Name="aboutButton" Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="AboutButton_OnClick" />
+                    <Button Name="adminButton" Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535"  Click="AdminButton_OnClick"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        
+        <Image Grid.Column="1" Grid.Row="1" Source="../Assets/UmbrellaAssets/logoTransparent.png"></Image>
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Center" Padding="0,150,0,70">
             <StackPanel  HorizontalAlignment="Center">
                 <TextBlock Text="Username" TextAlignment="Center" Foreground="White"/>
                 <TextBox  HorizontalAlignment="Center" Width="300" Margin="0,5,0,0" Name="userNameBox"/>

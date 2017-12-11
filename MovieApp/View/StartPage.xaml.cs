@@ -31,12 +31,18 @@ namespace MovieApp.View
 
         private void StartButton_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(MainPage));
         }
 
         private void TosBox_OnClick(object sender, RoutedEventArgs e)
         {
             startButton.IsEnabled = !startButton.IsEnabled;
+        }
+
+        private void tosPanel_OnPointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            startButton.IsEnabled = !startButton.IsEnabled;
+            tosBox.IsChecked = !tosBox.IsChecked;
         }
     }
 }

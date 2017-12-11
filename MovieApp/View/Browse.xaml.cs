@@ -42,10 +42,6 @@ namespace MovieApp.View
 
         }
 
-        private void ContinueButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
         private void SearchGenres_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -89,6 +85,41 @@ namespace MovieApp.View
                 _singleton.GetMovieList().Add(movie);
             }
         }
+
+        private void ContinueButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void HomeButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void BrowseButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Browse));
+        }
+
+        private void AboutButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(About));
+        }
+
+        private void AdminButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if ((App.Current as App).adminSession)
+            {
+                Frame.Navigate(typeof(AdminPage));
+            }
+            else
+            {
+                Frame.Navigate(typeof(LoginAdminPage));
+            }
+        }
+
+
+
     }
     }
 

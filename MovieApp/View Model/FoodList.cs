@@ -82,7 +82,6 @@ namespace MovieApp.View_Model
             Director = _singleton.GetDirector();
             Lenght = _singleton.GetLength();
             Genre = _singleton.GetGenre();
-            Actors = _singleton.GetActors();
             Censorship = _singleton.GetCensorship();
             Description = _singleton.GetDescription();
             Price = _singleton.GetPrice();

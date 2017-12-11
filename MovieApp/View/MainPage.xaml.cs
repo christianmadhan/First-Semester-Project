@@ -39,35 +39,52 @@ namespace MovieApp
 
         }
 
+
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            MainFrame.Navigate(typeof(Home));
+            int change = 1;
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(4);
+            timer.Tick += (o, a) =>
+            {
+                // If we'd go out of bounds then reverse
+                int newIndex = MovieFlip.SelectedIndex + change;
+                if (newIndex >= MovieFlip.Items.Count || newIndex < 0)
+                {
+                    change *= -1;
+                }
+
+                MovieFlip.SelectedIndex += change;
+            };
+            timer.Start();
         }
 
         private void HomeButton_OnClick(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Home));
+            Frame.Navigate(typeof(MainPage));
         }
 
         private void BrowseButton_OnClick(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Browse));
+            Frame.Navigate(typeof(Browse));
         }
 
         private void AboutButton_OnClick(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(About));
+            Frame.Navigate(typeof(About));
         }
 
         private void AdminButton_OnClick(object sender, RoutedEventArgs e)
         {
             if ((App.Current as App).adminSession)
             {
-                MainFrame.Navigate(typeof(AdminPage));
+                Frame.Navigate(typeof(AdminPage));
             }
             else
             {
-                MainFrame.Navigate(typeof(LoginAdminPage));
+                Frame.Navigate(typeof(LoginAdminPage));
             }
         }
     }
