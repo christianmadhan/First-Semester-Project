@@ -116,12 +116,12 @@ namespace MovieApp.View_Model
 
         public void DoAddFood()
         {
-            
+            _singleFood.GetFoodList().Add(AddNewFood);
         }
 
         public void DoDeleteFood()
         {
-            
+            _singleFood.GetFoodList().Remove(SelectedFood);
         }
 
         public void DoGoToCheckout()

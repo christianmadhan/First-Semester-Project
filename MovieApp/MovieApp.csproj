@@ -92,6 +92,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="View\FoodAdd.xaml.cs">
+      <DependentUpon>FoodAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\FrameNavigate.cs" />
     <Compile Include="Model\singletonFood.cs" />
     <Compile Include="Model\SingleTonFoodList.cs" />
@@ -221,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\FoodAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

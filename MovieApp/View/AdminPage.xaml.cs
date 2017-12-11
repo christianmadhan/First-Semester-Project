@@ -53,5 +53,10 @@ namespace MovieApp.View
                 Frame.Navigate(typeof(LoginAdminPage));
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(FoodAdd));
+        }
     }
 }
