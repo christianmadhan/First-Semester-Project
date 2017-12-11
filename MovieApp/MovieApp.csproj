@@ -96,7 +96,6 @@
     <Compile Include="Model\singletonFood.cs" />
     <Compile Include="Model\SingleTonFoodList.cs" />
     <Compile Include="View Model\CheckOutList.cs" />
-    <Compile Include="View Model\Filter.cs" />
     <Compile Include="View Model\FoodList.cs" />
     <Compile Include="View\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
