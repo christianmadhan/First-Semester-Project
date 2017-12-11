@@ -16,6 +16,7 @@
 
     <Grid Background="#d8d8d8">
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -30,24 +31,35 @@
             
         </Grid.ColumnDefinitions>
 
-        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Source="../Assets/UmbrellaAssets/logoTransparent.png"/>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" VerticalAlignment="Center">
+        <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0" Grid.ColumnSpan="4">
+            <StackPanel Orientation="Horizontal" Background="#353535">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="homeButton" Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="HomeButton_OnClick"/>
+                    <Button Name="browseButton" Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="BrowseButton_OnClick"/>
+                    <Button Name="aboutButton" Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="AboutButton_OnClick"/>
+                    <Button Name="adminButton" Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="AdminButton_OnClick"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        
+        <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Source="../Assets/UmbrellaAssets/logoTransparent.png"/>
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" VerticalAlignment="Center">
           <TextBlock.Text>
               Ruby is a theatre company developed in Copenhagen. The company was officialy founded by two brothers John and Jake Cook in 1990.
               Being first based in the city of Roskilde, as years past by the company started to spread its businessall over Denmark
               and after 1993 they established theatres in Germany, UK, France, Italy and whole region of Scandinavia. &#x0a; 
             </TextBlock.Text>
         </TextBlock>
-        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" FontSize="20">
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" FontSize="20">
             <TextBlock.Text>
                 It has grown rapidly to achieve a revenue of 11.9 million in 1995 after premier of first animated movie in history 
                 of cinematography &quot;Toy story&quot;.The company employs 872 staff in all theathers.
             </TextBlock.Text>
         </TextBlock>
 
-        <Image Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Source="../Assets/interior.jpg" Margin="20" Stretch="UniformToFill"/>
+        <Image Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Source="../Assets/interior.jpg" Margin="20" Stretch="UniformToFill"/>
             <!--promo code text -->
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="4" Background="#773438" Height="200" Orientation="Horizontal">
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="4" Background="#773438" Height="200" Orientation="Horizontal">
             <ListView >
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>

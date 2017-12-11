@@ -28,23 +28,32 @@ namespace MovieApp
             this.InitializeComponent();
         }
 
-        private void GoToHome(object sender, RoutedEventArgs e)
+
+        private void HomeButton_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
         }
-        private void GoToBrowse(object sender, RoutedEventArgs e)
+
+        private void BrowseButton_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Browse));
         }
 
-        private void GoToAdminPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(LoginAdminPage));
-        }
-
-        private void GoToAbout(object sender, RoutedEventArgs e)
+        private void AboutButton_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(About));
+        }
+
+        private void AdminButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if ((App.Current as App).adminSession)
+            {
+                Frame.Navigate(typeof(AdminPage));
+            }
+            else
+            {
+                Frame.Navigate(typeof(LoginAdminPage));
+            }
         }
     }
 }

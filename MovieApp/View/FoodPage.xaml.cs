@@ -32,11 +32,26 @@ namespace MovieApp.View
         }
 
 
-        private void HomeBtn(object sender, RoutedEventArgs e)
+
+        private void HomeButton_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
         }
 
+        private void BrowseButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Browse));
+        }
+
+        private void AboutButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(About));
+        }
+
+        private void AdminButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginAdminPage));
+        }
     }
 
 

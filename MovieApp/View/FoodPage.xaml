@@ -19,15 +19,18 @@
         </Grid.RowDefinitions>
         
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="350"/>
-            <ColumnDefinition Width="750"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0" Grid.ColumnSpan="3">
             <StackPanel Orientation="Horizontal" Background="#353535">
                 <StackPanel Orientation="Horizontal">
-                    <Button  Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="HomeBtn"/>
+                    <Button Name="homeButton" Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="HomeButton_OnClick"/>
+                    <Button Name="browseButton" Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="BrowseButton_OnClick" />
+                    <Button Name="aboutButton" Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="AboutButton_OnClick" />
+                    <Button Name="adminButton" Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="AdminButton_OnClick" />
                 </StackPanel>
             </StackPanel>
         </Border>
@@ -35,55 +38,58 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1" Background="#353535" x:Name="Root">
             <StackPanel>
-                <TextBlock TextAlignment="Center" Text="You Picked:" Foreground="White" FontSize="23"  FontFamily="Helvetica" />
+                <TextBlock TextAlignment="Center" Text="You Picked:" Foreground="White" FontSize="15"  FontFamily="Helvetica"/>
                 <Image Source="{Binding ImageUrl}" Height="200" Width="200"/>
             </StackPanel>
             <StackPanel>
                 
-                <StackPanel Orientation="Horizontal" Margin="20,30,0,0">
-                    <TextBlock Text="Title:  " Foreground="#773438"  FontFamily="Helvetica" FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Title}"  FontFamily="Helvetica" FontSize="20" Foreground="#d8d8d8" Margin="10,0,0,0" />
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <TextBlock Text="Title:  " Foreground="#773438"  FontFamily="Helvetica" FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Title}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0" />
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Director:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Director}"  FontFamily="Helvetica" FontSize="20" Foreground="#d8d8d8" Margin="10,0,0,0"/>
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                    <TextBlock Text="Director:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Director}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Length:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Lenght}"  FontFamily="Helvetica" FontSize="20" Foreground="#d8d8d8" Margin="10,0,0,0"/>
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                    <TextBlock Text="Length:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Lenght}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Genre: " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Genre}"  FontFamily="Helvetica" FontSize="20" Foreground="#d8d8d8" Margin="10,0,0,0"/>
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                    <TextBlock Text="Genre: " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Genre}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Censorship:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Censorship}"  FontFamily="Helvetica" FontSize="20" Foreground="#d8d8d8" Margin="10,0,0,0"/>
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                    <TextBlock Text="Actors:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Actors}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Description:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Description}"  FontFamily="Helvetica" FontSize="20" Foreground="#d8d8d8" Margin="10,0,0,0"/>
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                    <TextBlock Text="Censorship:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Censorship}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Price (DKK):      " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Price}"   FontFamily="Helvetica" FontSize="20" Foreground="#d8d8d8" Margin="10,0,0,0"/>
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                    <TextBlock Text="Description:  " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Description}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                    <TextBlock Text="Price:      " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique"/>
+                    <TextBlock Text="{Binding Price}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0"/>
                 </StackPanel>
 
             </StackPanel>
 
-            <Border BorderBrush="#773438" BorderThickness="0,0,0,10" Margin="10,30,10,10"/>
+            <MediaElement Source="{Binding Trailer}" Height="200" Margin="10,10,10,0"  />
+            <Button Content="Check out" HorizontalAlignment="Center" Command="{Binding GoToCheckOutCommand }" Margin="0,10,0,0" Background="#33CD2D2D"    FontFamily="Helvetica"/>
+            
             
            
-            <Button Content="Check out" HorizontalAlignment="Center" Command="{Binding GoToCheckOutCommand }" Height="40" Width="110" Margin="10,10,10,10" Background="#33CD2D2D"    FontFamily="Helvetica" Foreground="#FFE8E0E0" BorderThickness="5" BorderBrush="#FF1A1818"/>
-            <MediaElement Source="{Binding Trailer}" Height="180" Width="300" Margin="20,7,10,0"  />
-
-
         </StackPanel>
 
 
