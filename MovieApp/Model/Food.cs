@@ -14,6 +14,7 @@ namespace MovieApp.Model
         private string _size;
         private int _price;
         
+        
 
         public Food(string imageUrl,string name, string size, int price)
         {
