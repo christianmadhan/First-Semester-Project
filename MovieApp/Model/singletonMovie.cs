@@ -53,12 +53,7 @@ namespace MovieApp.Model
         {
             return _movie.Length;
         }
-
-        public string GetActors()
-        {
-            return _movie.Actors;
-        }
-
+        
         public string GetCensorship()
         {
             return _movie.Censorship;

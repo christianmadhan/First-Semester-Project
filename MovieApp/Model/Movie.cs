@@ -15,7 +15,6 @@ namespace MovieApp.Model
         private string _director;
         private string _length;
         private string _genre;
-        private string _actors;
         private string _censorship;
         private string _description;
         private int _price;
@@ -29,7 +28,6 @@ namespace MovieApp.Model
             _title = title;
             _director = director;
             _length = lenght;
-            _actors = actors;
             _censorship = censorship;
             _description = description;
             _genre = genre;
@@ -44,7 +42,6 @@ namespace MovieApp.Model
             _title = title;
             _director = director;
             _length = lenght;
-            _actors = actors;
             _censorship = censorship;
             _description = description;
             _genre = genre;
@@ -77,11 +74,6 @@ namespace MovieApp.Model
             set { _length = value; OnPropertyChanged(Length); }
         }
 
-        public string Actors
-        {
-            get { return _actors; }
-            set { _actors = value; OnPropertyChanged(Actors); }
-        }
 
         public string Censorship
         {
@@ -121,7 +113,6 @@ namespace MovieApp.Model
                    "Director: " + Director + "\n" +
                    "Length: " + Length + "\n" +
                    "Genre: " + Genre + "\n" +
-                   "Main Actor: " + Actors + "\n" +
                    "Censorship:  " + Censorship + "\n" +
                    "Price" + Price + "\n" +
                    "Description:  " + Description;
