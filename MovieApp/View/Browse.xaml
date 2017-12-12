@@ -36,11 +36,11 @@
             </StackPanel>
         </Border>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Orientation="Horizontal">
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Orientation="Horizontal">
             <ListView  
                       ItemsSource="{Binding Movies}"
                        SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"
-                      Background="#d8d8d8">
+                      Background="#d8d8d8" >
                 <ListView.ItemTemplate>
                     <DataTemplate  >
                         <StackPanel >
@@ -75,14 +75,14 @@
         </StackPanel>
         
         <!-- Filter Box -->
-        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" >
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1" >
             <StackPanel Margin="10,0,0,0">
                 <Border BorderBrush="#773438" BorderThickness="0,0,0,10">
-                    <TextBlock Text="Search" TextAlignment="Center" Margin="0,10,0,0"/>
+                    <TextBlock Text="Find movie" TextAlignment="Center" Margin="0,10,0,0"/>
                 </Border>
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                     <TextBlock Text="Genres:" Margin="0,0,0,0" VerticalAlignment="Center"/>
-                    <ComboBox  Margin="40,0,0,0" Width="100" SelectionChanged="SearchGenres_SelectionChanged" x:Name="FilterGenres">
+                    <ComboBox  Margin="2,0,0,0" Width="150" SelectionChanged="SearchGenres_SelectionChanged" x:Name="FilterGenres">
                         <ComboBoxItem Content="Action"/>
                         <ComboBoxItem Content="Comedy"/>
                         <ComboBoxItem Content="Documentary"/>
@@ -91,19 +91,19 @@
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button HorizontalAlignment="Center" Width="60" Height="30" Margin="0,10,0,0" Content="Filter" Click="FilterMovies" />
-                    <Button HorizontalAlignment="Center" Width="60" Height="30" Margin="10,10,0,0" Content="Reset" Click="ResetBtn" />
+                    <Button HorizontalAlignment="Center" Width="60" Height="30" Margin="10,10,0,0" Content="Filter" Click="FilterMovies" Background="#773438" />
+                    <Button HorizontalAlignment="Center" Width="60" Height="30" Margin="20,10,0,0" Content="Reset" Click="ResetBtn" Background="#773438" />
                 </StackPanel>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Center" Margin="48,0,43,0">
+            <StackPanel HorizontalAlignment="Center" Margin="48,20,43,0">
                 <RadioButton Name="PriceSortRB" Content="Sort by price"/>
                 <RadioButton Name="AlphabetSortRB" Content="Sort by name"/>
-                <Button Content="Sort" HorizontalAlignment="Center" Click="SortTheList"/>
+                <Button Content="Sort" HorizontalAlignment="Center" Click="SortTheList" Background="#773438"/>
             </StackPanel>
 
             <StackPanel Margin="0,20,0,0">
                 <TextBlock Text="Select Movie" TextAlignment="Center"/>
-                <Button Content="Let me watch!" HorizontalAlignment="Center" Command="{Binding GoToBuyFoodPageCommand}" />
+                <Button Content="Let me watch!" HorizontalAlignment="Center" Command="{Binding GoToBuyFoodPageCommand}" Background="#773438" />
             </StackPanel>
         </StackPanel>
     </Grid>
