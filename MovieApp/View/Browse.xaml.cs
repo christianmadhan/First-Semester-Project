@@ -69,7 +69,7 @@ namespace MovieApp.View
             }
             catch (Exception exception)
             {
-                var dialig = new MessageDialog(exception.Message);
+                var dialig = new MessageDialog("You have to pick a genre before you use the filter button");
                 await dialig.ShowAsync();
             }
         }
