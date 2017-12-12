@@ -28,6 +28,7 @@ namespace MovieApp.View
     public sealed partial class Browse : Page
     {
         public RelayCommand FindMovies { get; set; }
+        
 
         private  SingletonMovieList _singleton = SingletonMovieList.GetInstance();
 
@@ -80,14 +81,15 @@ namespace MovieApp.View
    
         private void ResetBtn(object sender, RoutedEventArgs e)
         {
-            var myCollection = _singleton.GetMovieList();
-            foreach (var movie in ResetList)
-            {
-                if (movie.Genre != FilterGenres.SelectionBoxItem.ToString())
+
+                foreach (var movie in ResetList)
                 {
-                    _singleton.GetMovieList().Add(movie);
+                    if (movie.Genre != FilterGenres.SelectionBoxItem.ToString())
+                    {
+                        _singleton.GetMovieList().Add(movie);
+                    }
                 }
-            }
+
         }
 
         private void HomeButton_OnClick(object sender, RoutedEventArgs e)
@@ -118,7 +120,7 @@ namespace MovieApp.View
         }
 
 
-        //TODO
+        
         private void SortTheList(object sender, RoutedEventArgs e)
         {
             if ((bool)PriceSortRB.IsChecked)

@@ -56,6 +56,12 @@ namespace MovieApp.Model
             return _food.Description;
         }
 
+        public string GetPromoCode()
+        {
+            return _food.Promocode;
+        }
+
+
 
     }
 }

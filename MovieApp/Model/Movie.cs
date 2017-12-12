@@ -104,6 +104,8 @@ namespace MovieApp.Model
             set { _trailer = value; }
         }
 
+    
+
 
         /* Tostring method that return all the information
              about the movie */

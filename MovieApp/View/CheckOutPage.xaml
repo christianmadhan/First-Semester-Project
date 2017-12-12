@@ -46,6 +46,10 @@
                     <TextBlock Text="{Binding PriceFood}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Promocode:  "/>
+                    <TextBlock Text="{Binding PromoCode}"/>
+                </StackPanel>
+                    <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Total Price: "/>
                     <TextBlock Text="{Binding TotalPrice}"/>
                 </StackPanel>

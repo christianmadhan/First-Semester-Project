@@ -28,8 +28,9 @@ namespace MovieApp.View
         public FoodPage()
         {
             this.InitializeComponent();
- 
-        }
+            
+
+    }
 
 
 

@@ -14,6 +14,7 @@ namespace MovieApp.Model
         private string _size;
         private int _price;
         private string _description;
+        private string _promoCode;
         
 
         public Food(string imageUrl,string name, string size, int price )
@@ -68,6 +69,17 @@ namespace MovieApp.Model
             get { return _description; }
             set { _description = value; OnPropertyChanged(Description); }
         }
+
+        public string Promocode
+        {
+            get { return _promoCode; }
+            set
+            {
+                _promoCode = value;
+                OnPropertyChanged(Promocode);
+            }
+        }
+
 
         public override string ToString()
         {

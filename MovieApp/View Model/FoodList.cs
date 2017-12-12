@@ -127,6 +127,8 @@ namespace MovieApp.View_Model
         public void DoGoToCheckout()
         {
             _userSingletonFood.SetFood(_selecetedFood);
+            FoodPage food = new FoodPage();
+            
             Type type = typeof(CheckOutPage);
             _frameNavigate.ActivateFrameNavigation(type);
 
