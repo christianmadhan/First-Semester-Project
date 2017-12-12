@@ -121,10 +121,16 @@ namespace MovieApp.View
         //TODO
         private void SortTheList(object sender, RoutedEventArgs e)
         {
-           
+            if ((bool)PriceSortRB.IsChecked)
+            {
+                _singleton.SortListPrice();
+            }
 
+            if ((bool)AlphabetSortRB.IsChecked)
+            {
+                _singleton.SortListAlphabetically();
+            }
         }
-
 
     }
     }
