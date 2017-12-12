@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using Windows.Storage;
 using Windows.Storage.Pickers;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using MovieApp.Model;
 using MovieApp.View;
@@ -12,6 +13,7 @@ namespace MovieApp.View_Model
 {
     class CheckOutList
     {
+        private readonly FrameNavigate _frameNavigate;
        
         //Selected Food
         private singletonFood _singletonFood;
@@ -47,6 +49,7 @@ namespace MovieApp.View_Model
 
             _singleton = singletonMovie.GetInstance();
             _singletonFood = singletonFood.GetInstance();
+            _frameNavigate = new FrameNavigate();
 
 
             NameFood = _singletonFood.GetDescription();
@@ -111,6 +114,13 @@ namespace MovieApp.View_Model
                 
                
                 await FileIO.WriteTextAsync(file, builder.ToString());
+
+                var dialog = new MessageDialog("You have Succesfully Downloaded the ticket!" + Environment.NewLine + "You will now get returned to the home page");
+                await dialog.ShowAsync();
+
+                Type type = typeof(MainPage);
+                _frameNavigate.ActivateFrameNavigation(type);
+
             }
 
 
