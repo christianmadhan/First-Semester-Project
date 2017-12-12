@@ -112,17 +112,57 @@ namespace MovieApp.Model
             
        }
 
-       public void SortList()
+       public void SortListPrice()
        {
-           
+           Movie x;
+           for (int i = 1; i < ListMovie.Count; i++)
+           for (int j = 0; j < ListMovie.Count-i; j++)
+           if (ListMovie[j].Price > ListMovie[j+1].Price)
+           {
+               x = ListMovie[j];
+               ListMovie[j] = ListMovie[j + 1];
+               ListMovie[j +1] = x;
+           }                                            
        }
+       public void SortListAlphabetically()
+       {
+           Movie x;
+           for (int i = 1; i < ListMovie.Count; i++)
+           for (int j = 0; j < ListMovie.Count - i; j++)
+           {
+               if (ListMovie[j].Title[0] > ListMovie[j + 1].Title[0])
+               {
+                   x = ListMovie[j];
+                   ListMovie[j] = ListMovie[j + 1];
+                   ListMovie[j + 1] = x;
+               }
 
+               /*
+                *      DO NOT DELETE PLEASE
+                * When the first letters are same 
+                * I want it to check other letters in those words
+                */
+
+               //if (ListMovie[j].Title[0] == ListMovie[j+1].Title[0])
+               //{
+               //    for (int k = 1; k < ListMovie[j].Title.Length -1; k++)
+               //    {
+               //        if (ListMovie[j].Title[k] > ListMovie[j+1].Title[k])
+               //        {
+               //            x = ListMovie[j];
+               //            ListMovie[j] = ListMovie[j + 1];
+               //            ListMovie[j + 1] = x;
+               //        }
+               //    }
+               //}
+           }
+       }
         //public static void SaveToJsonFile()
         //{
         //    //string movieJsonString = JsonConvert.SerializeObject(ListMovie);
         //    ////var localMovieListFile = await ApplicationData.Current.LocalFolder.CreateFileAsync("MovieData.bat", CreationCollisionOption.ReplaceExisting);
         //    ////await FileIO.WriteTextAsync(localMovieListFile, movieJsonString);
-           
+
         //}
         // The file will be saved here
         //C:\Users\cmiw\AppData\Local\Packages\app.a4b445279-dd15-4c69-b3ae-cfe7278b4e9d_8wekyb3d8bbwe\LocalState
