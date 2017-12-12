@@ -74,8 +74,13 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Price:      DKK" Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
+                    <TextBlock Text="Price (DKK):      " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
                     <TextBlock x:Name="_Price" Text="{Binding Price}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0" FontSize="20"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
+                    <TextBlock Text="Promo Code:      " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
+                    <TextBox Text="" Width="170" Margin="15,-1,0,0"/>
                 </StackPanel>
 
             </StackPanel>
