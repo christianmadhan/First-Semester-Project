@@ -12,7 +12,7 @@ namespace MovieApp.View_Model
 {
     class CheckOutList
     {
-        private double totalPrice = 0;
+       
         //Selected Food
         private singletonFood _singletonFood;
         
@@ -39,10 +39,12 @@ namespace MovieApp.View_Model
 
         public RelayCommand GetTicket { get; set; }
 
-        public int TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
 
         public CheckOutList()
         {
+            TotalPrice = PriceMovie + PriceFood;
+
             _singleton = singletonMovie.GetInstance();
             _singletonFood = singletonFood.GetInstance();
 
@@ -56,8 +58,10 @@ namespace MovieApp.View_Model
             }
             else if (_singletonFood.GetPromoCode().Equals("1forrest1", StringComparison.CurrentCultureIgnoreCase))
             {
-                
+                double price = _singleton.GetPrice() + _singletonFood.GetPrice();
+                double Saving = 0.20 * price;
                 PromoCode = _singletonFood.GetPromoCode();
+                TotalPrice = price - Saving;
             }
             else
             {
@@ -69,28 +73,14 @@ namespace MovieApp.View_Model
             TitleMovie = _singleton.GetTitle();
             PriceMovie = _singleton.GetPrice();
 
-            TotalPrice = PriceMovie + PriceFood;
+            
 
             GetTicket = new RelayCommand(DownloadTicket);
         }
 
         public async void DownloadTicket()
         {
-            int price = _singleton.GetPrice() + _singletonFood.GetPrice();
-            if (_singletonFood.GetPromoCode().Equals("1forrest1", StringComparison.CurrentCultureIgnoreCase))
-            {
-                totalPrice = price * 0.20 - _singleton.GetPrice() + _singletonFood.GetPrice();
-            }
-            else if (_singletonFood.GetPromoCode() == "")
-            {
-                totalPrice = price;
-            }
-            else
-            {
-                totalPrice = price;
-
-            }
-       
+        
 
             FileSavePicker picker = new FileSavePicker();
             picker.FileTypeChoices.Add("txt", new List<string>() { ".txt" });
@@ -105,7 +95,7 @@ namespace MovieApp.View_Model
                 string dodedLine = "-----------------------------------" + Environment.NewLine;
                 string  movieinformation = "Movie: " + _singleton.GetTitle() + Environment.NewLine + "Price: " + _singleton.GetPrice() + Environment.NewLine + Environment.NewLine;
                 string foodinformation = "Food: " + _singletonFood.GetDescription() + Environment.NewLine + "Price: " + _singletonFood.GetPrice() + Environment.NewLine + Environment.NewLine;
-                string totalPrice = "Total Price " + this.totalPrice;
+                string totalPrice = "Total Price " + TotalPrice;
                 
 
 
