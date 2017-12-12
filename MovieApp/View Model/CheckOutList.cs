@@ -65,7 +65,6 @@ namespace MovieApp.View_Model
             if (file != null)
             {
                 int totalPrice = _singleton.GetPrice() + _singletonFood.GetPrice();
-                StringBuilder builder = new StringBuilder();
                 string information;
                 
                 if (_singletonFood.GetName() == "")
