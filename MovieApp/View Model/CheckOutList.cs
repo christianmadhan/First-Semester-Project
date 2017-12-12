@@ -49,12 +49,16 @@ namespace MovieApp.View_Model
             _singletonFood = singletonFood.GetInstance();
 
 
-            NameFood = _singletonFood.GetName();
+            NameFood = _singletonFood.GetDescription();
             SizeFood = _singletonFood.GetSize();
             PriceFood = _singletonFood.GetPrice();
+            ImageUrlMovie = _singleton.GetImageUrl();
+            TitleMovie = _singleton.GetTitle();
+            PriceMovie = _singleton.GetPrice();
             if (String.IsNullOrEmpty(_singletonFood.GetPromoCode()))
             {
                 PromoCode = "No promocode";
+                TotalPrice = PriceMovie + PriceFood;
             }
             else if (_singletonFood.GetPromoCode().Equals("1forrest1", StringComparison.CurrentCultureIgnoreCase))
             {
@@ -67,12 +71,6 @@ namespace MovieApp.View_Model
             {
                 PromoCode = "Not valid";
             }
-
-
-            ImageUrlMovie = _singleton.GetImageUrl();
-            TitleMovie = _singleton.GetTitle();
-            PriceMovie = _singleton.GetPrice();
-
             
 
             GetTicket = new RelayCommand(DownloadTicket);
@@ -81,27 +79,35 @@ namespace MovieApp.View_Model
         public async void DownloadTicket()
         {
         
-
+            Random random = new Random();
             FileSavePicker picker = new FileSavePicker();
-            picker.FileTypeChoices.Add("txt", new List<string>() { ".txt" });
+            picker.FileTypeChoices.Add("RTF", new List<string>() { ".RTF" });
             picker.SuggestedStartLocation = PickerLocationId.Desktop;
             picker.SuggestedFileName = "RuybyTicket";
+
+           
  
             StorageFile file = await picker.PickSaveFileAsync();
             if (file != null)
             {
               
-                string Rubyticket = "                Ruby Ticket" + Environment.NewLine;
-                string dodedLine = "-----------------------------------" + Environment.NewLine;
+                string Rubyticket = "                   Ruby Ticket" + Environment.NewLine;
+                string dodedLine = "---------------------------------------------------" + Environment.NewLine;
                 string  movieinformation = "Movie: " + _singleton.GetTitle() + Environment.NewLine + "Price: " + _singleton.GetPrice() + Environment.NewLine + Environment.NewLine;
                 string foodinformation = "Food: " + _singletonFood.GetDescription() + Environment.NewLine + "Price: " + _singletonFood.GetPrice() + Environment.NewLine + Environment.NewLine;
-                string totalPrice = "Total Price " + TotalPrice;
-                
+                string totalPrice = "Total Price " + TotalPrice + Environment.NewLine + Environment.NewLine;
+                string promocode = "Promocode: " + PromoCode + Environment.NewLine + Environment.NewLine;
+                string important = "! Important ! " + Environment.NewLine;
+                string ticketID = "Ticket ID:  " + random.Next(1, 10000) + Environment.NewLine;
+                string print = "Print this document, and show it" + Environment.NewLine +
+                               "In our theater, and you will" + Environment.NewLine + "get your menu and tickets" + Environment.NewLine + Environment.NewLine;
+                string goodbuy = "We look forward seeing you!";
+
 
 
 
                 StringBuilder builder = new StringBuilder();
-                builder.AppendLine(Rubyticket + dodedLine + movieinformation +  foodinformation + totalPrice );
+                builder.AppendLine(Rubyticket + dodedLine + movieinformation +  foodinformation + promocode + totalPrice + dodedLine + important + ticketID + dodedLine + print + goodbuy );
                 
                
                 await FileIO.WriteTextAsync(file, builder.ToString());

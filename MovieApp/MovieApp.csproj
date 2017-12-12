@@ -199,6 +199,7 @@
     <Content Include="Assets\Trailers\jumanjiTrailer.mov" />
     <Content Include="Assets\Trailers\JusticeLeagueTrailer.mov" />
     <Content Include="Assets\UmbrellaAssets\Christmasdec1.jpg" />
+    <Content Include="Assets\CinnemaBackground.jpg" />
     <Content Include="Assets\UmbrellaAssets\logoTransparent.png" />
     <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-100.png" />
     <Content Include="Assets\UmbrellaAssets\logoTransparent.scale-125.png" />

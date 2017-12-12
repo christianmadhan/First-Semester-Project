@@ -8,7 +8,10 @@
     xmlns:viewModel="using:MovieApp.View_Model"
     mc:Ignorable="d">
 
-    <Grid Background="#d8d8d8">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/CinnemaBackground.jpg"/>
+        </Grid.Background>
 
         <Grid.DataContext>
             <viewModel:CheckOutList/>
@@ -18,45 +21,66 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="500"/>
+            <RowDefinition Height="460"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Border Grid.Column="1" Grid.Row="1" BorderBrush="#353535" CornerRadius="10,10,10,10" BorderThickness="7,7,7,8" >
             <StackPanel Background="#353535">
-            <StackPanel>
-                <TextBlock Text="Check Out" Foreground="White" FontSize="20" TextAlignment="Center"/>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Movie: "/>
-                    <TextBlock Text="{Binding TitleMovie}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Price: "/>
-                    <TextBlock Text="{Binding PriceMovie}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Food: "/>
-                    <TextBlock Text="{Binding NameFood}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Price: "/>
-                    <TextBlock Text="{Binding PriceFood}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Promocode:  "/>
-                    <TextBlock Text="{Binding PromoCode}"/>
-                </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Total Price: "/>
-                    <TextBlock Text="{Binding TotalPrice}"/>
-                </StackPanel>
-                    <Button Content="Get Ticket" Command="{Binding GetTicket}"/>
+                <StackPanel Height="485">
+                    <TextBlock Text="Check Out" Foreground="White" FontSize="20" TextAlignment="Center"/>
 
+                    <Border BorderBrush="Red" BorderThickness="0,0,0,3" Margin="0,10,0,0" Width="490" HorizontalAlignment="Center" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="Movie information: " Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Orientation="Horizontal" Margin="8,10,0,0">
+                        <TextBlock Text="Movie: " Foreground="White" />
+                        <TextBlock Text="{Binding TitleMovie}" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="8,10,0,0">
+                        <TextBlock Text="Price: " Foreground="White" />
+                        <TextBlock Text="{Binding PriceMovie}" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <Border BorderBrush="Red" BorderThickness="0,0,0,3" Margin="0,10,0,0" Width="490" HorizontalAlignment="Center" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="Food information: " Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Orientation="Horizontal" Margin="8,10,0,0">
+                        <TextBlock Text="Food: " Foreground="White"/>
+                        <TextBlock Text="{Binding NameFood}" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="8,10,0,0">
+                        <TextBlock Text="Price: " Foreground="White"/>
+                        <TextBlock Text="{Binding PriceFood}" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <Border BorderBrush="Red" BorderThickness="0,0,0,3" Margin="0,10,0,0" Width="500" HorizontalAlignment="Center" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="Promo Code: " Foreground="White" />
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Orientation="Horizontal" Margin="8,10,0,0">
+                        <TextBlock Text="Promocode:  " Foreground="White"/>
+                        <TextBlock Text="{Binding PromoCode}" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="8,10,0,0">
+                        <TextBlock Text="Total Price: " Foreground="White"/>
+                        <TextBlock Text="{Binding TotalPrice}" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,50,0,0">
+                        <Button Content="Get Ticket" Command="{Binding GetTicket}" Foreground="White"/>
+                    </StackPanel>
+
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
         </Border>
 
     </Grid>
