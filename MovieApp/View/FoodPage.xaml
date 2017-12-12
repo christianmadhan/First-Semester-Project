@@ -17,7 +17,7 @@
             <RowDefinition Height="0.1*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="3.5*"/>
@@ -42,7 +42,7 @@
                 <Image Source="{Binding ImageUrl}" Height="200" Width="200"/>
             </StackPanel>
             <StackPanel>
-                
+
                 <StackPanel Orientation="Horizontal" Margin="20,30,0,0">
                     <TextBlock Text="Title:  " Foreground="#773438"  FontFamily="Helvetica" FontStyle="Oblique" FontSize="20"/>
                     <TextBlock Text="{Binding Title}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0" FontSize="20"/>
@@ -74,20 +74,20 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal"  Margin="20,0,0,0">
-                    <TextBlock Text="Price:      " Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
-                    <TextBlock Text="{Binding Price}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0" FontSize="20"/>
+                    <TextBlock Text="Price:      DKK" Foreground="#773438"  FontFamily="Helvetica"  FontStyle="Oblique" FontSize="20"/>
+                    <TextBlock x:Name="_Price" Text="{Binding Price}"  FontFamily="Helvetica" Foreground="#d8d8d8" Margin="10,0,0,0" FontSize="20"/>
                 </StackPanel>
 
             </StackPanel>
 
             <Border BorderBrush="#773438" BorderThickness="0,0,0,10" Grid.Row="1" Margin="10,24,10,10"/>
-           
+
             <Button Content="Check out" HorizontalAlignment="Center" Command="{Binding GoToCheckOutCommand }"  Height="35" Width="110" Margin="0,10,0,0" Background="#33CD2D2D"  BorderThickness="5"  FontFamily="Helvetica" BorderBrush="#FF171717" Foreground="#FFC3BFBF" />
-            
+
             <MediaElement Source="{Binding Trailer}" Height="180" Width="300" Margin="10,30,10,0"  />
-            
-            
-           
+
+
+
         </StackPanel>
 
 
@@ -100,7 +100,7 @@
                     <DataTemplate  >
                         <StackPanel >
                             <StackPanel Orientation="Horizontal" Width="600"  Margin="0,0,10,10">
-                                <Image Source="{Binding ImageUrl}" Width="200"  /> 
+                                <Image Source="{Binding ImageUrl}" Width="200"  />
                                 <StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding Name}"  FontFamily="Helvetica"/>
@@ -132,17 +132,18 @@
         </StackPanel>
 
         <StackPanel Grid.Column="3" Grid.Row="1" Background="#353535">
-            
+
         </StackPanel>
 
         <StackPanel Grid.Column="3" Grid.Row="2">
-            <TextBlock Text="Merry Christmas!!!" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Black" Foreground="#FFF1DDDD" Margin="10,20,10,10"/>
-        <Border Grid.Column="2" Grid.Row="1" BorderBrush="#773438" BorderThickness="0,0,0,10" Margin="10,10,10,580"/>
-        <TextBlock TextWrapping="Wrap"  Width="310" Text="Remember to use our promo code '1Forrest1' to get 20% off your order! Just insert the code at checkout" Foreground="#773438"  FontFamily="Helvetica" FontStyle="Oblique" FontSize="20" TextAlignment="Center" Margin="10,-560,10,10"/>
-        <Image Source="../Assets/Banner.png" Margin="10,-800,10,10" />
+            <TextBlock Text="Merry Christmas!!!" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Black" Foreground="#FFBAAFAF" Margin="10,20,10,10"/>
+            <Border Grid.Column="2" Grid.Row="1" BorderBrush="#773438" BorderThickness="0,0,0,10" Margin="10,10,10,580"/>
+            <TextBlock TextWrapping="Wrap"  Width="310" Text="Remember to use our promo code '1Forrest1' to get 20% off your order! Just insert the code at checkout" Foreground="#FFBAAFAF"  FontFamily="Helvetica" FontStyle="Oblique" FontSize="20" TextAlignment="Center" Margin="10,-560,10,10"/>
+            <Image Source="../Assets/Banner.png" Margin="10,-800,10,10" />
         </StackPanel>
 
-        
+      
+
 
     </Grid>
 

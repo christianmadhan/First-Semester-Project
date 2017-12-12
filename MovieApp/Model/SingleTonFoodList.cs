@@ -22,11 +22,11 @@ namespace MovieApp.Model
         {
             ListFood = new ObservableCollection<Food>()
             {
-                new Food("../Assets/food.png","Menu 1", "Large" ,100,"Large popcorn,large pepsi and snickers"),
-                new Food("../Assets/food.png","Menu 2", "Medium" , 50,"Medium popcorn,medium pepsi+kit-kat"),
-                new Food("../Assets/food.png","Menu 3", "Small", 60,"Small popcorn and small pepsi"),
-                new Food("../Assets/food.png","Menu 4", "Large", 80),
-                new Food("../Assets/food.png","Menu 5", "XXLARGE REST IN PEACE", 90),
+                new Food("../Assets/food.png","Menu 1", "Kids Meal" ,40, "Large Popcorn,large Pepsi and Snickers"),
+                new Food("../Assets/food.png","Menu 2", "Small" , 50,"Small Popcorn and small Pepsi"),
+                new Food("../Assets/food.png","Menu 3", "Medium", 60,"Medium popcorn,medium Pepsi+ Kitkat"),
+                new Food("../Assets/food.png","Menu 4", "Large", 80, "Large Popcorn,large Pepsi and Snickers" ),
+                new Food("../Assets/food.png","Menu 5", "XXLARGE REST IN PEACE", 90, " Super Large Popcorn,large Pepsi and Snickers"),
             };
         }
 

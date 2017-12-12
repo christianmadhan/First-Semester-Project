@@ -43,5 +43,9 @@ namespace MovieApp
             Frame.Navigate(typeof(About));
         }
 
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

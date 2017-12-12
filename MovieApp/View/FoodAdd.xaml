@@ -9,6 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <Grid.DataContext>
             <viewModel:FoodList/>
         </Grid.DataContext>
@@ -30,9 +31,9 @@
         <Border BorderThickness="0,0,0,10" BorderBrush="#773438" Grid.Row="0" Grid.ColumnSpan="3">
             <StackPanel Orientation="Horizontal" Background="#353535">
                 <StackPanel Orientation="Horizontal">
-                    <Button Name="homeButton" Content="Home" Margin="10,19,10,0" Foreground="White" Background="#353535" VerticalAlignment="Top" Click="homeButton_Click"/>
-                    <Button Name="browseButton" Content="Browse" Margin="10,0,10,3.2" Foreground="White" Background="#353535" VerticalAlignment="Bottom" Click="browseButton_Click"/>
-                    <Button Name="aboutButton" Content="About" Margin="10,0,10,3.2" Foreground="White" Background="#353535" VerticalAlignment="Bottom" Click="aboutButton_Click"/>
+                    <Button Name="homeButton" Content="Home" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="homeButton_Click"/>
+                    <Button Name="browseButton" Content="Browse" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="browseButton_Click"/>
+                    <Button Name="aboutButton" Content="About" Margin="10,16,10,0" Foreground="White" Background="#353535" Click="aboutButton_Click"/>
                     <Button Name="adminButton" Content="Admin" Margin="10,16,10,0" Foreground="White" Background="#353535"/>
                 </StackPanel>
             </StackPanel>
@@ -75,13 +76,13 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Orientation="Horizontal">
-            <ListView ItemsSource="{Binding Foods}" SelectedItem="{Binding SelectedFood,Mode=TwoWay}">
+            <ListView Width="1200" ItemsSource="{Binding Foods}" SelectedItem="{Binding SelectedFood,Mode=TwoWay}" SelectionChanged="ListView_SelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="0,0,10,10">
+                        <StackPanel Orientation="Horizontal" Width="560" Margin="0,0,10,10">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="{Binding ImageUrl}"/>
-                                <TextBlock Text="{Binding}" FontWeight="Bold" />
+                                <Image  Height="200" Width="250"  Source="{Binding ImageUrl}"/>
+                                <TextBlock TextWrapping="Wrap" Width="310" Text="{Binding}" FontWeight="Bold" />
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>

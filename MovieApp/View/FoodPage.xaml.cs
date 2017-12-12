@@ -52,6 +52,11 @@ namespace MovieApp.View
         {
             Frame.Navigate(typeof(LoginAdminPage));
         }
+
+        private void Button_Click()
+        {
+
+        }
     }
 
 
