@@ -131,6 +131,7 @@ namespace MovieApp.View
             if ((bool)AlphabetSortRB.IsChecked)
             {
                 _singleton.SortListAlphabetically();
+
             }
         }
 
