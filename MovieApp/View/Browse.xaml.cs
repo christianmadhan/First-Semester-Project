@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Popups;
@@ -79,9 +80,11 @@ namespace MovieApp.View
 
 
    
-        private void ResetBtn(object sender, RoutedEventArgs e)
+        private async  void ResetBtn(object sender, RoutedEventArgs e)
         {
 
+            try
+            {
                 foreach (var movie in ResetList)
                 {
                     if (movie.Genre != FilterGenres.SelectionBoxItem.ToString())
@@ -89,6 +92,12 @@ namespace MovieApp.View
                         _singleton.GetMovieList().Add(movie);
                     }
                 }
+            }
+            catch (Exception exception)
+            {
+                 var dialog = new MessageDialog("The list is already reset.");
+                 await dialog.ShowAsync();
+            }
 
         }
 
@@ -123,15 +132,23 @@ namespace MovieApp.View
         
         private void SortTheList(object sender, RoutedEventArgs e)
         {
-            if ((bool)PriceSortRB.IsChecked)
+            try
             {
-                _singleton.SortListPrice();
+                if ((bool)PriceSortRB.IsChecked)
+                {
+                    _singleton.SortListPrice();
+                }
+
+                if ((bool)AlphabetSortRB.IsChecked)
+                {
+                    _singleton.SortListAlphabetically();
+
+                }
             }
-
-            if ((bool)AlphabetSortRB.IsChecked)
+            catch (Exception exception)
             {
-                _singleton.SortListAlphabetically();
-
+                Console.WriteLine(exception);
+                throw;
             }
         }
 
